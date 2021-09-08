@@ -1,5 +1,5 @@
 # RadioProgramador
 
 Equipo:
-    Payón Aguilar Fernando
-    Rodriguez Zamora Elizabeth
+* Payón Aguilar Fernando, @FernandoPA11
+* Rodriguez Zamora Elizabeth, @ShirinVelvet
