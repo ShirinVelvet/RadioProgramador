@@ -112,5 +112,10 @@ namespace RadioProgramador.gui {
 				}
 			}
 		}
+
+		private void Messagebox_click(object sender, RoutedEventArgs e) {
+			bool respuesta = DarkMessageBox.ShowAndWait("Hola", "Este es el contenido.", 1, 1, 2);
+			Console.WriteLine("Respuesta: " + respuesta);
+		}
 	}
 }
