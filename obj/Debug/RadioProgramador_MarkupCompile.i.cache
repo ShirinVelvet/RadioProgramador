@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\RadioProgramador\obj\Debug\
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\
 RadioProgramador
 none
 false
 DEBUG;TRACE
-C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\RadioProgramador\App.xaml
-11151548125
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\App.xaml
+2-325045133
 
-61522651010
+7963852039
 13152784993
-MainWindow.xaml;
+gui\DarkMessageBox.xaml;gui\MainWindow.xaml;
 
-True
+False
 
