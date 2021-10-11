@@ -73,6 +73,7 @@ namespace RadioProgramador.gui {
 
 		private void AjustarVentana() {
 			if (this.windowMaximized) {
+				button_restaurar.Content = "\xE922";
 				this.windowMaximized = false;
 				this.WindowState = WindowState.Normal;
 				this.ResizeMode = ResizeMode.CanResize;
@@ -82,6 +83,7 @@ namespace RadioProgramador.gui {
 				this.Left = restoreLeft;
 				chrome.ResizeBorderThickness = SystemParameters.WindowResizeBorderThickness;
 			} else {
+				button_restaurar.Content = "\xE923";
 				this.windowMaximized = true;
 				this.WindowState = WindowState.Normal;
 				GetRestoreSize();

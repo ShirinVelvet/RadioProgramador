@@ -30,7 +30,7 @@
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
 			<Button Content="&#xE8BB;" HorizontalAlignment="Left" Margin="82.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonClose}" Click="Cerrar_click" Grid.Column="2" />
-			<Button Content="&#xE923;" HorizontalAlignment="Left" Margin="41.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Restaurar_click" Grid.Column="2"/>
+			<Button x:Name="button_restaurar" Content="&#xE923;" HorizontalAlignment="Left" Margin="41.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Restaurar_click" Grid.Column="2"/>
 			<Button Content="&#xE921;" HorizontalAlignment="Left" Margin="0.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Minimizar_click" Grid.Column="2"/>
 			<TextBlock TextWrapping="Wrap" Text="Radio Programador" Foreground="White" FontSize="14" Grid.Column="1" TextAlignment="Center" Margin="0,4,0,0"/>
 			<Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Grid.Column="0"/>
