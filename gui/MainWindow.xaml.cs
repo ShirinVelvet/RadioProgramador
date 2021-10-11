@@ -73,6 +73,7 @@ namespace RadioProgramador.gui {
 		private void AjustarVentata() {
 			if (this.windowMaximized) {
 				this.windowMaximized = false;
+				this.WindowState = WindowState.Normal;
 				this.ResizeMode = ResizeMode.CanResize;
 				this.Height = restoreHeight;
 				this.Width = restoreWidth;
@@ -80,6 +81,7 @@ namespace RadioProgramador.gui {
 				this.Left = restoreLeft;
 			} else {
 				this.windowMaximized = true;
+				this.WindowState = WindowState.Normal;
 				GetRestoreSize();
 				this.Height = maxHeight;
 				this.Width = maxWidth;
@@ -116,6 +118,12 @@ namespace RadioProgramador.gui {
 		private void Messagebox_click(object sender, RoutedEventArgs e) {
 			bool respuesta = DarkMessageBox.ShowAndWait("Hola", "Este es el contenido.", 1, 1, 2);
 			Console.WriteLine("Respuesta: " + respuesta);
+		}
+
+		private void Ventana_cambioEstado(object sender, EventArgs e) {
+			if (this.WindowState == WindowState.Maximized) {
+				AjustarVentata();
+			}
 		}
 	}
 }
