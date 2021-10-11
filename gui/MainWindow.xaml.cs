@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Shell;
 
 namespace RadioProgramador.gui {
 	/// <summary>
@@ -79,6 +80,7 @@ namespace RadioProgramador.gui {
 				this.Width = restoreWidth;
 				this.Top = restoreTop;
 				this.Left = restoreLeft;
+				chrome.ResizeBorderThickness = SystemParameters.WindowResizeBorderThickness;
 			} else {
 				this.windowMaximized = true;
 				this.WindowState = WindowState.Normal;
@@ -88,6 +90,7 @@ namespace RadioProgramador.gui {
 				this.Top = 0;
 				this.Left = 0;
 				this.ResizeMode = ResizeMode.NoResize;
+				chrome.ResizeBorderThickness = new System.Windows.Thickness(0);
 			}
 		}
 

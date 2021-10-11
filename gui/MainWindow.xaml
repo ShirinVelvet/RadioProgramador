@@ -12,7 +12,7 @@
 		MaxHeight="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" Loaded="VentanaCargada" Width="1536" Height="824" StateChanged="Ventana_cambioEstado"
 		>
 	<WindowChrome.WindowChrome>
-		<WindowChrome CaptionHeight="0" ResizeBorderThickness="{x:Static SystemParameters.WindowResizeBorderThickness}" />
+		<WindowChrome x:Name="chrome" CaptionHeight="0" ResizeBorderThickness="0" />
 	</WindowChrome.WindowChrome>
 	<Grid x:Name="grid_main">
 		<Grid.RowDefinitions>
