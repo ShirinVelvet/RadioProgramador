@@ -64,14 +64,14 @@ namespace RadioProgramador.gui {
 		}
 
 		private void Restaurar_click(object sender, RoutedEventArgs e) {
-			AjustarVentata();
+			AjustarVentana();
 		}
 
 		///////////////////////////////////
 		//   Ajustar tamaño de ventana   //
 		///////////////////////////////////
 
-		private void AjustarVentata() {
+		private void AjustarVentana() {
 			if (this.windowMaximized) {
 				this.windowMaximized = false;
 				this.WindowState = WindowState.Normal;
@@ -109,7 +109,7 @@ namespace RadioProgramador.gui {
 		private void Ventana_mover(object sender, MouseButtonEventArgs e) {
 			if (e.ChangedButton == MouseButton.Left) {
 				if (e.ClickCount == 2) {
-					AjustarVentata();
+					AjustarVentana();
 				} else {
 					if (!windowMaximized) {
 						this.DragMove();
@@ -125,7 +125,7 @@ namespace RadioProgramador.gui {
 
 		private void Ventana_cambioEstado(object sender, EventArgs e) {
 			if (this.WindowState == WindowState.Maximized) {
-				AjustarVentata();
+				AjustarVentana();
 			}
 		}
 	}
