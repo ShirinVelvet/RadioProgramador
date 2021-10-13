@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="tools\ExpressionIcon.cs" />
     <Page Include="gui\DarkMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,7 +109,6 @@
     <Folder Include="model\dao\" />
     <Folder Include="model\poco\" />
     <Folder Include="resources\" />
-    <Folder Include="tools\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RadioProgramador.tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace RadioProgramador.gui {
 	/// <summary>
-	/// Iconos: 0=Nada, 1=Info, 2=Exclamacion, 3=Error, 4=TrianguloExclamacion, 5=Interrogacion
+	/// Iconos: 0=Nada, 1=Info, 2=Exclamacion, 3=Error, 4=TrianguloExclamacion, 5=Interrogacion, 6=Completado
 	/// Botones: 0=Nada, 1=Aceptar, 2=Cancelar, 3=Sí, 4=No
 	/// ShowAndWait regresa true para Aceptar y Sí, y false para Cancelar y No
 	/// Si no se especifican botones, se agrega por defecto Aceptar
@@ -30,7 +31,7 @@ namespace RadioProgramador.gui {
 		public DarkMessageBox(string titulo, string contenido, int icono, int boton1, int boton2, int boton3) : this() {
 			tb_titulo.Text = titulo;
 			tb_contenido.Text = contenido;
-			label_icono.Content = SeleccionarIcono(icono);
+			SeleccionarIcono(icono);
 			MostrarBoton(boton1);
 			MostrarBoton(boton2);
 			MostrarBoton(boton3);
@@ -61,29 +62,36 @@ namespace RadioProgramador.gui {
 			Close();
 		}
 
-		private string SeleccionarIcono(int icono) {
-			string iconoString;
+		private void SeleccionarIcono(int icono) {
 			switch (icono) {
 				case 1:
-					iconoString = "\xE946";
+					label_icono.Content = ExpressionIcon.Info.Icon;
+					label_icono.Foreground = ExpressionIcon.Info.Color;
 					break;
 				case 2:
-					iconoString = "\xEA39";
+					label_icono.Content = ExpressionIcon.Exclamation.Icon;
+					label_icono.Foreground = ExpressionIcon.Exclamation.Color;
 					break;
 				case 3:
-					iconoString = "\xE946";
+					label_icono.Content = ExpressionIcon.Error.Icon;
+					label_icono.Foreground = ExpressionIcon.Error.Color;
 					break;
 				case 4:
-					iconoString = "\xE814";
+					label_icono.Content = ExpressionIcon.IncidentTriangle.Icon;
+					label_icono.Foreground = ExpressionIcon.IncidentTriangle.Color;
 					break;
 				case 5:
-					iconoString = "\xE9CE";
+					label_icono.Content = ExpressionIcon.Question.Icon;
+					label_icono.Foreground = ExpressionIcon.Question.Color;
+					break;
+				case 6:
+					label_icono.Content = ExpressionIcon.Completed.Icon;
+					label_icono.Foreground = ExpressionIcon.Completed.Color;
 					break;
 				default:
-					iconoString = "";
+					label_icono.Content = "";
 					break;
 			}
-			return iconoString;
 		}
 
 		private void MostrarBoton(int boton) {

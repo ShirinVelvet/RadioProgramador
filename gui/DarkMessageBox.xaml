@@ -17,7 +17,7 @@
 		</Grid.ColumnDefinitions>
 		<Rectangle Fill="#FF1B1B1B" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="400" MouseDown="Ventana_mover"/>
 		<TextBlock x:Name="tb_titulo" HorizontalAlignment="Left" Margin="0,4,0,0" TextWrapping="Wrap" Text="Titulo" VerticalAlignment="Top" Foreground="White" TextAlignment="Center" FontSize="14" Width="400" MouseDown="Ventana_mover"/>
-		<Label x:Name="label_icono" Content="&#xE783;" HorizontalAlignment="Left" Margin="25,32,0,31.4" Grid.Row="1" VerticalAlignment="Center" Foreground="White" FontSize="50" FontFamily="Segoe MDL2 Assets"/>
+		<Label x:Name="label_icono" Content="&#xE783;" HorizontalAlignment="Left" Margin="25,0,0,0" Grid.Row="1" VerticalAlignment="Center" Foreground="White" FontSize="50" FontFamily="Segoe MDL2 Assets"/>
 		<TextBlock x:Name="tb_contenido" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Contenido" VerticalAlignment="Center" Foreground="White" Width="265" FontSize="14"/>
 		<DockPanel x:Name="dock_botones" HorizontalAlignment="Left" Height="48" LastChildFill="False" Margin="0,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" Grid.RowSpan="2">
 			<Button x:Name="button_no" Content="No" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Style="{DynamicResource ButtonGeneric}" Foreground="White" Background="#FF3A3A3A" Height="28" DockPanel.Dock="Right" Margin="6,4,6,0" Visibility="Collapsed" Click="Cancelar" BorderBrush="{x:Null}" FontSize="14"/>
