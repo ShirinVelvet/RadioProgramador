@@ -23,6 +23,7 @@
 		<SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
 		<SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
 		<SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+		
 		<Style x:Key="ButtonClose" TargetType="{x:Type Button}">
 			<Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
 			<Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -60,6 +61,7 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		
 		<Style x:Key="ButtonMaximize" TargetType="{x:Type Button}">
 			<Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
 			<Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -97,6 +99,7 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		
 		<Style x:Key="ButtonGeneric" TargetType="{x:Type Button}">
 			<Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
 			<Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -109,7 +112,7 @@
 			<Setter Property="Template">
 				<Setter.Value>
 					<ControlTemplate TargetType="{x:Type Button}">
-						<Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+						<Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
 							<ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
 						</Border>
 						<ControlTemplate.Triggers>
@@ -118,11 +121,11 @@
 							</Trigger>
 							<Trigger Property="IsMouseOver" Value="true">
 								<Setter Property="Background" TargetName="border" Value="#4B4B4B"/>
-								<Setter Property="BorderBrush" TargetName="border" Value="#707070"/>
+								<Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
 							</Trigger>
 							<Trigger Property="IsPressed" Value="true">
 								<Setter Property="Background" TargetName="border" Value="#696969"/>
-								<Setter Property="BorderBrush" TargetName="border" Value="#707070"/>
+								<Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
 							</Trigger>
 							<Trigger Property="IsEnabled" Value="false">
 								<Setter Property="Background" TargetName="border" Value="#3A3A3A"/>
