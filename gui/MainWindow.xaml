@@ -23,7 +23,7 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
-		<Grid Grid.Row="0" Grid.Column="0" Background="#FF1B1B1B" MouseDown="Ventana_mover">
+		<Grid x:Name="grid_titleBar" Grid.Row="0" Grid.Column="0" Background="#FF1B1B1B" MouseDown="Ventana_mover">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto"/>
 				<ColumnDefinition/>
@@ -35,7 +35,160 @@
 			<TextBlock TextWrapping="Wrap" Text="Radio Programador" Foreground="White" FontSize="14" Grid.Column="1" TextAlignment="Center" Margin="0,4,0,0" TextTrimming="CharacterEllipsis"/>
 			<Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Grid.Column="0"/>
 		</Grid>
-		<Grid Grid.Row="2" Grid.Column="0" Background="#FF1B1B1B"/>
-		<Button Content="Probar DarkMessageBox" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Center" Style="{DynamicResource ButtonGeneric}" Click="Messagebox_click" Foreground="White" Background="#FF3A3A3A" Height="28" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Width="173" FontSize="14"/>
+		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid x:Name="grid_sideMenu" Grid.RowSpan="2">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition/>
+					<RowDefinition Height="40"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Margin="0" Grid.Row="1">
+					<RadioButton x:Name="rb_canciones" VerticalAlignment="Top" Margin="0" Foreground="White" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Background="{x:Null}" BorderBrush="{x:Null}" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE8D6;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_canciones" Grid.Column="1" Content="Canciones" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+					<RadioButton x:Name="rb_artistas" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE77B;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_artistas" Grid.Column="1" Content="Artistas" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+					<RadioButton x:Name="rb_generos" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE93C;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_generos" Grid.Column="1" Content="Géneros" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+					<RadioButton x:Name="rb_categorias" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE90B;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_categorias" Grid.Column="1" Content="Categorías" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+					<RadioButton x:Name="rb_programas" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE768;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_programas" Grid.Column="1" Content="Programas" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+					<RadioButton x:Name="rb_patrones" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE74C;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_patrones" Grid.Column="1" Content="Patrones" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+					<RadioButton x:Name="rb_reportes" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE9F9;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+							<Label x:Name="label_reportes" Grid.Column="1" Content="Reportes" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+						</Grid>
+					</RadioButton>
+				</StackPanel>
+				<RadioButton x:Name="rb_config" VerticalAlignment="Top" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Margin="0" Grid.Row="3" Grid.RowSpan="2">
+					<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE713;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+						<Label x:Name="label_config" Grid.Column="1" Content="Configuración" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+					</Grid>
+				</RadioButton>
+				<Button x:Name="button_contraerMenu" Style="{DynamicResource ButtonMaximize}" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Click="ContraerMenu_click">
+					<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<Label Grid.Column="0" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE700;" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
+						<Label x:Name="label_menu" Grid.Column="1" Content="Menú" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
+					</Grid>
+				</Button>
+			</Grid>
+			<Frame x:Name="frame_panel1" Grid.Column="1" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden">
+				<Frame.Content>
+					<Grid>
+						<Button Grid.Row="0" Content="Probar DarkMessageBox" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Style="{DynamicResource ButtonGeneric}" Click="Messagebox_click" Foreground="White" Background="#FF3A3A3A" Height="28" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Width="173" FontSize="14"/>
+						<TextBox TextWrapping="Wrap" Text="Panel 1" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0,0,0,228.6" BorderBrush="{x:Null}"/>
+					</Grid>
+				</Frame.Content>
+			</Frame>
+			<Frame x:Name="frame_panel2" Grid.Column="1" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1">
+				<Frame.Content>
+					<Grid>
+						<TextBox TextWrapping="Wrap" Text="Panel 2" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0"/>
+					</Grid>
+				</Frame.Content>
+			</Frame>
+			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden">
+				<Frame.Content>
+					<Grid>
+						<TextBox TextWrapping="Wrap" Text="Panel 3" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0"/>
+					</Grid>
+				</Frame.Content>
+			</Frame>
+			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1">
+				<Frame.Content>
+					<Grid>
+						<TextBox TextWrapping="Wrap" Text="Panel 4" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0"/>
+					</Grid>
+				</Frame.Content>
+			</Frame>
+		</Grid>
+		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1B1B1B">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="200"/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="150"/>
+			</Grid.ColumnDefinitions>
+			<Label Content="Usuario:" HorizontalAlignment="Left" Foreground="White"/>
+			<Label x:Name="label_usuario" Content="&lt;&lt;Usuario actual&gt;&gt;" HorizontalAlignment="Left" Foreground="White" Margin="53,0,0,0.4"/>
+			<Line Grid.Column="1" Stroke="#FF646464" Y2="26.4" HorizontalAlignment="Left"/>
+			<Label x:Name="label_estado" Content="&lt;&lt;Último estado&gt;&gt;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="30,0,0,0.4"/>
+			<Label x:Name="label_estadoIcono" Content="&#xE930;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="6,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" FontSize="14"/>
+			<Button Style="{DynamicResource ButtonMaximize}" Content="Log" Grid.Column="2" Margin="0.4,0,0,0.4" Width="150" Background="#FF3A3A3A" BorderBrush="{x:Null}" Foreground="White" FontSize="14"/>
+		</Grid>
 	</Grid>
 </Window>

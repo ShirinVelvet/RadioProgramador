@@ -36,6 +36,8 @@ namespace RadioProgramador.gui {
 		private int restoreTop;
 		private int restoreLeft;
 
+		private bool menuContraido;
+
 		public MainWindow() {
 			InitializeComponent();
 			InicializarVentana();
@@ -45,10 +47,20 @@ namespace RadioProgramador.gui {
 			this.windowMaximized = true;
 			this.restoreHeight = 600;
 			this.restoreWidth = 800;
+			this.menuContraido = false;
 		}
 
 		private void VentanaCargada(object sender, RoutedEventArgs e) {
 			GetMaxSize();
+		}
+
+		///////////////////////////////////
+		//            Pruebas            //
+		///////////////////////////////////
+
+		private void Messagebox_click(object sender, RoutedEventArgs e) {
+			bool respuesta = DarkMessageBox.ShowAndWait("Hola", "Este es el contenido.", 1, 1, 2);
+			Console.WriteLine("Respuesta: " + respuesta);
 		}
 
 		///////////////////////////////////
@@ -120,15 +132,44 @@ namespace RadioProgramador.gui {
 			}
 		}
 
-		private void Messagebox_click(object sender, RoutedEventArgs e) {
-			bool respuesta = DarkMessageBox.ShowAndWait("Hola", "Este es el contenido.", 1, 1, 2);
-			Console.WriteLine("Respuesta: " + respuesta);
-		}
-
 		private void Ventana_cambioEstado(object sender, EventArgs e) {
 			if (this.WindowState == WindowState.Maximized) {
 				AjustarVentana();
 			}
+		}
+
+		private void ContraerMenu_click(object sender, RoutedEventArgs e) {
+			if (menuContraido == true) {
+				ExpandirMenu();
+				menuContraido = false;
+			} else {
+				ContraerMenu();
+				menuContraido = true;
+			}
+		}
+
+		private void ContraerMenu() {
+			label_menu.Visibility = Visibility.Collapsed;
+			label_canciones.Visibility = Visibility.Collapsed;
+			label_artistas.Visibility = Visibility.Collapsed;
+			label_generos.Visibility = Visibility.Collapsed;
+			label_categorias.Visibility = Visibility.Collapsed;
+			label_programas.Visibility = Visibility.Collapsed;
+			label_patrones.Visibility = Visibility.Collapsed;
+			label_reportes.Visibility = Visibility.Collapsed;
+			label_config.Visibility = Visibility.Collapsed;
+		}
+
+		private void ExpandirMenu() {
+			label_menu.Visibility = Visibility.Visible;
+			label_canciones.Visibility = Visibility.Visible;
+			label_artistas.Visibility = Visibility.Visible;
+			label_generos.Visibility = Visibility.Visible;
+			label_categorias.Visibility = Visibility.Visible;
+			label_programas.Visibility = Visibility.Visible;
+			label_patrones.Visibility = Visibility.Visible;
+			label_reportes.Visibility = Visibility.Visible;
+			label_config.Visibility = Visibility.Visible;
 		}
 	}
 }
