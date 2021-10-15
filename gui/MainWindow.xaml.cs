@@ -59,7 +59,7 @@ namespace RadioProgramador.gui {
 		///////////////////////////////////
 
 		private void Messagebox_click(object sender, RoutedEventArgs e) {
-			bool respuesta = DarkMessageBox.ShowAndWait("Este es el título", "Este es el contenido.", 6, 1, 2);
+			bool respuesta = PopupMessage.ShowAndWait("Este es el título", "Este es el contenido.",6, 1, 2);
 			Console.WriteLine("Respuesta: " + respuesta);
 		}
 

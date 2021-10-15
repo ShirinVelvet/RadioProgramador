@@ -59,7 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="tools\ExpressionIcon.cs" />
-    <Page Include="gui\DarkMessageBox.xaml">
+    <Page Include="gui\PopupMessage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,8 +71,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="gui\DarkMessageBox.xaml.cs">
-      <DependentUpon>DarkMessageBox.xaml</DependentUpon>
+    <Compile Include="gui\PopupMessage.xaml.cs">
+      <DependentUpon>PopupMessage.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

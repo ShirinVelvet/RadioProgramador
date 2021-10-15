@@ -20,15 +20,15 @@ namespace RadioProgramador.gui {
 	/// ShowAndWait regresa true para Aceptar y Sí, y false para Cancelar y No
 	/// Si no se especifican botones, se agrega por defecto Aceptar
 	/// </summary>
-	public partial class DarkMessageBox : Window {
+	public partial class PopupMessage : Window {
 
 		private static bool respuesta;
 
-		public DarkMessageBox() {
+		public PopupMessage() {
 			InitializeComponent();
 		}
 
-		public DarkMessageBox(string titulo, string contenido, int icono, int boton1, int boton2, int boton3) : this() {
+		public PopupMessage(string titulo, string contenido, int icono, int boton1, int boton2, int boton3) : this() {
 			tb_titulo.Text = titulo;
 			tb_contenido.Text = contenido;
 			SeleccionarIcono(icono);
@@ -41,7 +41,7 @@ namespace RadioProgramador.gui {
 		}
 
 		public static bool ShowAndWait(string titulo, string contenido, int icono = 0, int boton1 = 0, int boton2 = 0, int boton3 = 0) {
-			DarkMessageBox darkMessageBox = new DarkMessageBox(titulo, contenido, icono, boton1, boton2, boton3);
+			PopupMessage darkMessageBox = new PopupMessage(titulo, contenido, icono, boton1, boton2, boton3);
 			darkMessageBox.ShowDialog();
 			return respuesta;
 		}

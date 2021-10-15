@@ -7,7 +7,7 @@
 		mc:Ignorable="d"
 		Title="MainWindow"
 		WindowStyle="None" WindowStartupLocation="CenterScreen"
-		ResizeMode="NoResize" Background="#FF222222"
+		ResizeMode="NoResize" Background="#FF121212"
 		MaxWidth="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}"
 		MaxHeight="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" Loaded="VentanaCargada" Width="1536" Height="824" StateChanged="Ventana_cambioEstado"
 		>
@@ -23,7 +23,7 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
-		<Grid x:Name="grid_titleBar" Grid.Row="0" Grid.Column="0" Background="#FF1B1B1B" MouseDown="Ventana_mover">
+		<Grid x:Name="grid_titleBar" Grid.Row="0" Grid.Column="0" Background="#FF1F1F1F" MouseDown="Ventana_mover">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto"/>
 				<ColumnDefinition/>
@@ -32,10 +32,10 @@
 			<Button Content="&#xE8BB;" HorizontalAlignment="Left" Margin="82.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonClose}" Click="Cerrar_click" Grid.Column="2" />
 			<Button x:Name="button_restaurar" Content="&#xE923;" HorizontalAlignment="Left" Margin="41.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Restaurar_click" Grid.Column="2"/>
 			<Button Content="&#xE921;" HorizontalAlignment="Left" Margin="0.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Minimizar_click" Grid.Column="2"/>
-			<TextBlock TextWrapping="Wrap" Text="Radio Programador" Foreground="White" FontSize="14" Grid.Column="1" TextAlignment="Center" Margin="0,4,0,0" TextTrimming="CharacterEllipsis"/>
+			<TextBlock TextWrapping="Wrap" Text="Radio Programador" Foreground="White" FontSize="14" TextAlignment="Center" Margin="123.2,4,0,0" TextTrimming="CharacterEllipsis" Grid.ColumnSpan="2"/>
 			<Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Grid.Column="0"/>
 		</Grid>
-		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2">
+		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2" Background="#FF121212">
 			<Grid.RowDefinitions>
 				<RowDefinition/>
 				<RowDefinition/>
@@ -45,7 +45,7 @@
 				<ColumnDefinition/>
 				<ColumnDefinition/>
 			</Grid.ColumnDefinitions>
-			<Grid x:Name="grid_sideMenu" Grid.RowSpan="2">
+			<Grid x:Name="grid_sideMenu" Grid.RowSpan="2" Background="#FF1F1F1F">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
 					<RowDefinition/>
@@ -147,39 +147,15 @@
 					</Grid>
 				</Button>
 			</Grid>
-			<Frame x:Name="frame_panel1" Grid.Column="1" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden">
-				<Frame.Content>
-					<Grid>
-						<Button Grid.Row="0" Content="Probar DarkMessageBox" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Style="{DynamicResource ButtonGeneric}" Click="Messagebox_click" Foreground="White" Background="#FF3A3A3A" Height="28" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Width="173" FontSize="14"/>
-						<TextBox TextWrapping="Wrap" Text="Panel 1" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0,0,0,228.6" BorderBrush="{x:Null}"/>
-					</Grid>
-				</Frame.Content>
-			</Frame>
-			<Frame x:Name="frame_panel2" Grid.Column="1" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1">
-				<Frame.Content>
-					<Grid>
-						<TextBox TextWrapping="Wrap" Text="Panel 2" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0"/>
-					</Grid>
-				</Frame.Content>
-			</Frame>
-			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden">
-				<Frame.Content>
-					<Grid>
-						<TextBox TextWrapping="Wrap" Text="Panel 3" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0"/>
-					</Grid>
-				</Frame.Content>
-			</Frame>
-			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="0" Background="#FF282828" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1">
-				<Frame.Content>
-					<Grid>
-						<TextBox TextWrapping="Wrap" Text="Panel 4" Background="{x:Null}" TextAlignment="Center" FontSize="26" Foreground="White" Focusable="False" Margin="0"/>
-					</Grid>
-				</Frame.Content>
-			</Frame>
+			<Frame x:Name="frame_panel1" Grid.Column="1" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
+			<Frame x:Name="frame_panel2" Grid.Column="1" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
+			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar PopupMessage" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="14" Click="Messagebox_click" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 		</Grid>
-		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1B1B1B">
+		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1F1F1F">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="200"/>
+				<ColumnDefinition Width="197"/>
 				<ColumnDefinition/>
 				<ColumnDefinition Width="150"/>
 			</Grid.ColumnDefinitions>
@@ -188,7 +164,7 @@
 			<Line Grid.Column="1" Stroke="#FF646464" Y2="26.4" HorizontalAlignment="Left"/>
 			<Label x:Name="label_estado" Content="&lt;&lt;Último estado&gt;&gt;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="30,0,0,0.4"/>
 			<Label x:Name="label_estadoIcono" Content="&#xE930;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="6,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" FontSize="14"/>
-			<Button Style="{DynamicResource ButtonMaximize}" Content="Log" Grid.Column="2" Margin="0.4,0,0,0.4" Width="150" Background="#FF3A3A3A" BorderBrush="{x:Null}" Foreground="White" FontSize="14"/>
+			<Button Style="{DynamicResource ButtonMaximize}" Content="Log" Grid.Column="2" Margin="0" Width="150" Background="#FF2C2C2C" BorderBrush="{x:Null}" Foreground="White" FontSize="14" Padding="1,-1,1,1"/>
 		</Grid>
 	</Grid>
 </Window>
