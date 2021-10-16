@@ -29,14 +29,13 @@ namespace RadioProgramador.gui {
 
 		// Para redimensionar ventana
 		private bool windowMaximized;
-		private int maxHeight;
-		private int maxWidth;
 		private int restoreHeight;
 		private int restoreWidth;
 		private int restoreTop;
 		private int restoreLeft;
 
 		private bool menuContraido;
+		public bool logPinned;
 
 		public MainWindow() {
 			InitializeComponent();
@@ -44,14 +43,11 @@ namespace RadioProgramador.gui {
 		}
 
 		private void InicializarVentana() {
-			this.windowMaximized = true;
-			this.restoreHeight = 600;
-			this.restoreWidth = 800;
-			this.menuContraido = false;
-		}
-
-		private void VentanaCargada(object sender, RoutedEventArgs e) {
-			GetMaxSize();
+			windowMaximized = true;
+			restoreHeight = 600;
+			restoreWidth = 800;
+			menuContraido = false;
+			logPinned = false;
 		}
 
 		///////////////////////////////////
@@ -59,7 +55,8 @@ namespace RadioProgramador.gui {
 		///////////////////////////////////
 
 		private void Messagebox_click(object sender, RoutedEventArgs e) {
-			bool respuesta = PopupMessage.ShowAndWait("Este es el título", "Este es el contenido.",6, 1, 2);
+			string contenido = "Este es el contenido";
+			bool respuesta = PopupMessage.ShowAndWait("Este es el título", contenido,6, 1, 2);
 			Console.WriteLine("Respuesta: " + respuesta);
 		}
 
@@ -72,7 +69,7 @@ namespace RadioProgramador.gui {
 		}
 
 		private void Minimizar_click(object sender, RoutedEventArgs e) {
-			this.WindowState = WindowState.Minimized;
+			WindowState = WindowState.Minimized;
 		}
 
 		private void Restaurar_click(object sender, RoutedEventArgs e) {
@@ -84,40 +81,35 @@ namespace RadioProgramador.gui {
 		///////////////////////////////////
 
 		private void AjustarVentana() {
-			if (this.windowMaximized) {
+			if (windowMaximized) {
 				button_restaurar.Content = "\xE922";
-				this.windowMaximized = false;
-				this.WindowState = WindowState.Normal;
-				this.ResizeMode = ResizeMode.CanResize;
-				this.Height = restoreHeight;
-				this.Width = restoreWidth;
-				this.Top = restoreTop;
-				this.Left = restoreLeft;
+				windowMaximized = false;
+				WindowState = WindowState.Normal;
+				ResizeMode = ResizeMode.CanResize;
+				Height = restoreHeight;
+				Width = restoreWidth;
+				Top = restoreTop;
+				Left = restoreLeft;
 				chrome.ResizeBorderThickness = SystemParameters.WindowResizeBorderThickness;
 			} else {
 				button_restaurar.Content = "\xE923";
-				this.windowMaximized = true;
-				this.WindowState = WindowState.Normal;
+				windowMaximized = true;
+				WindowState = WindowState.Normal;
 				GetRestoreSize();
-				this.Height = maxHeight;
-				this.Width = maxWidth;
-				this.Top = 0;
-				this.Left = 0;
-				this.ResizeMode = ResizeMode.NoResize;
+				Height = SystemParameters.WorkArea.Height;
+				Width = SystemParameters.WorkArea.Width;
+				Top = 0;
+				Left = 0;
+				ResizeMode = ResizeMode.NoResize;
 				chrome.ResizeBorderThickness = new System.Windows.Thickness(0);
 			}
 		}
 
-		private void GetMaxSize() {
-			this.maxHeight = (int) this.Height;
-			this.maxWidth = (int) this.Width;
-		}
-
 		private void GetRestoreSize() {
-			this.restoreHeight = (int) this.Height;
-			this.restoreWidth = (int) this.Width;
-			this.restoreTop = (int) this.Top;
-			this.restoreLeft = (int) this.Left;
+			restoreHeight = (int) Height;
+			restoreWidth = (int) Width;
+			restoreTop = (int) Top;
+			restoreLeft = (int) Left;
 		}
 
 		private void Ventana_mover(object sender, MouseButtonEventArgs e) {
@@ -126,17 +118,21 @@ namespace RadioProgramador.gui {
 					AjustarVentana();
 				} else {
 					if (!windowMaximized) {
-						this.DragMove();
+						DragMove();
 					}
 				}
 			}
 		}
 
 		private void Ventana_cambioEstado(object sender, EventArgs e) {
-			if (this.WindowState == WindowState.Maximized) {
+			if (WindowState == WindowState.Maximized) {
 				AjustarVentana();
 			}
 		}
+
+		///////////////////////////////////
+		//           Menú y log          //
+		///////////////////////////////////
 
 		private void ContraerMenu_click(object sender, RoutedEventArgs e) {
 			if (menuContraido == true) {
@@ -170,6 +166,20 @@ namespace RadioProgramador.gui {
 			label_patrones.Visibility = Visibility.Visible;
 			label_reportes.Visibility = Visibility.Visible;
 			label_config.Visibility = Visibility.Visible;
+		}
+
+		private void Log_click(object sender, RoutedEventArgs e) {
+			if (frame_log.Visibility == Visibility.Collapsed) {
+				frame_log.Visibility = Visibility.Visible;
+			} else {
+				frame_log.Visibility = Visibility.Collapsed;
+			}
+		}
+
+		private void Log_clickAfuera(object sender, MouseButtonEventArgs e) {
+			if (!logPinned && !frame_log.IsMouseOver) {
+				frame_log.Visibility = Visibility.Collapsed;
+			}
 		}
 	}
 }

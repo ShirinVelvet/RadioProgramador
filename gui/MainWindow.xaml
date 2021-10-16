@@ -9,7 +9,10 @@
 		WindowStyle="None" WindowStartupLocation="CenterScreen"
 		ResizeMode="NoResize" Background="#FF121212"
 		MaxWidth="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}"
-		MaxHeight="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" Loaded="VentanaCargada" Width="1536" Height="824" StateChanged="Ventana_cambioEstado"
+		MaxHeight="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}"
+		Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}"
+		Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}"
+		StateChanged="Ventana_cambioEstado"
 		>
 	<WindowChrome.WindowChrome>
 		<WindowChrome x:Name="chrome" CaptionHeight="0" ResizeBorderThickness="0" />
@@ -35,7 +38,7 @@
 			<TextBlock TextWrapping="Wrap" Text="Radio Programador" Foreground="White" FontSize="14" TextAlignment="Center" Margin="123.2,4,0,0" TextTrimming="CharacterEllipsis" Grid.ColumnSpan="2"/>
 			<Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Grid.Column="0"/>
 		</Grid>
-		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2" Background="#FF121212">
+		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2" Background="#FF121212" PreviewMouseLeftButtonDown="Log_clickAfuera">
 			<Grid.RowDefinitions>
 				<RowDefinition/>
 				<RowDefinition/>
@@ -152,19 +155,20 @@
 			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
 			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
 			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar PopupMessage" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="14" Click="Messagebox_click" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+			<Frame x:Name="frame_log" Grid.ZIndex="1000" Source="Log.xaml" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
 		</Grid>
 		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1F1F1F">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="197"/>
 				<ColumnDefinition/>
-				<ColumnDefinition Width="150"/>
+				<ColumnDefinition Width="120"/>
 			</Grid.ColumnDefinitions>
 			<Label Content="Usuario:" HorizontalAlignment="Left" Foreground="White"/>
 			<Label x:Name="label_usuario" Content="&lt;&lt;Usuario actual&gt;&gt;" HorizontalAlignment="Left" Foreground="White" Margin="53,0,0,0.4"/>
 			<Line Grid.Column="1" Stroke="#FF646464" Y2="26.4" HorizontalAlignment="Left"/>
 			<Label x:Name="label_estado" Content="&lt;&lt;Último estado&gt;&gt;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="30,0,0,0.4"/>
 			<Label x:Name="label_estadoIcono" Content="&#xE930;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="6,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" FontSize="14"/>
-			<Button Style="{DynamicResource ButtonMaximize}" Content="Log" Grid.Column="2" Margin="0" Width="150" Background="#FF2C2C2C" BorderBrush="{x:Null}" Foreground="White" FontSize="14" Padding="1,-1,1,1"/>
+			<Button Style="{DynamicResource ButtonMaximize}" Content="Log" Grid.Column="2" Margin="0" Background="#FF2C2C2C" BorderBrush="{x:Null}" Foreground="White" FontSize="14" Padding="1,-1,1,1" Click="Log_click"/>
 		</Grid>
 	</Grid>
 </Window>
