@@ -48,6 +48,7 @@ namespace RadioProgramador.gui {
 			restoreWidth = 800;
 			menuContraido = false;
 			logPinned = false;
+			PruebaCombo();
 		}
 
 		///////////////////////////////////
@@ -58,6 +59,17 @@ namespace RadioProgramador.gui {
 			string contenido = "Este es el contenido";
 			bool respuesta = PopupMessage.ShowAndWait("Este es el título", contenido,6, 1, 2);
 			Console.WriteLine("Respuesta: " + respuesta);
+			Log log = (Log) frame_log.Content;
+			log.tb_sql.Text += "Se abrió PopupMessage\n";
+			log.tb_sql.Text += $"Respuesta: {respuesta}\n";
+		}
+
+		private void PruebaCombo() {
+			List<string> listaCombo = new List<string>();
+			listaCombo.Add("Oh sí");
+			listaCombo.Add("Oh no");
+			listaCombo.Add("Oh cielos");
+			combo_prueba.ItemsSource = listaCombo;
 		}
 
 		///////////////////////////////////

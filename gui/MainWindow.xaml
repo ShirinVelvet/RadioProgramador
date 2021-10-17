@@ -8,8 +8,6 @@
 		Title="MainWindow"
 		WindowStyle="None" WindowStartupLocation="CenterScreen"
 		ResizeMode="NoResize" Background="#FF121212"
-		MaxWidth="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}"
-		MaxHeight="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}"
 		Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}"
 		Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}"
 		StateChanged="Ventana_cambioEstado"
@@ -155,7 +153,48 @@
 			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
 			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="0" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
 			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar PopupMessage" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="14" Click="Messagebox_click" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-			<Frame x:Name="frame_log" Grid.ZIndex="1000" Source="Log.xaml" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
+			<Frame x:Name="frame_log" Source="Log.xaml" Grid.ZIndex="1000" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
+			<TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,40.4,0,0" TextWrapping="Wrap" Text="TextBox1" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.ColumnSpan="2" Grid.Row="1"/>
+			<TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,90.4,0,0" TextWrapping="Wrap" Text="TextBox2" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.ColumnSpan="2" Grid.Row="1"/>
+			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,39.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
+			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Left" Margin="160.8,39.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
+			<CheckBox Content="L" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="153.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="186.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="J" Grid.Column="2" HorizontalAlignment="Left" Margin="219.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="V" Grid.Column="2" HorizontalAlignment="Left" Margin="252.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="S" Grid.Column="2" HorizontalAlignment="Left" Margin="285.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="D" Grid.Column="2" HorizontalAlignment="Left" Margin="318.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" Style="{DynamicResource ComboBoxGeneric}">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<Label Content="{Binding}" Width="Auto" Foreground="#FFFFFF"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+				<ComboBox.ItemContainerStyle>
+					<Style TargetType="{x:Type ComboBoxItem}">
+						<Setter Property="Template">
+							<Setter.Value>
+								<ControlTemplate TargetType="{x:Type ComboBoxItem}">
+									<Border x:Name="Bd" Padding="4,0" BorderBrush="Transparent" CornerRadius="5" BorderThickness="0" Background="Transparent">
+									<StackPanel Orientation="Horizontal">
+										<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+									</StackPanel>
+									</Border>
+									<ControlTemplate.Triggers>
+										<Trigger Property="IsSelected" Value="True">
+											<Setter TargetName="Bd" Property="Background" Value="#616161" />
+										</Trigger>
+										<Trigger Property="IsMouseOver" Value="True">
+											<Setter TargetName="Bd" Property="Background" Value="#525252" />
+										</Trigger>
+									</ControlTemplate.Triggers>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</ComboBox.ItemContainerStyle>
+			</ComboBox>
 		</Grid>
 		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1F1F1F">
 			<Grid.ColumnDefinitions>
