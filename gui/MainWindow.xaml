@@ -165,36 +165,26 @@
 			<CheckBox Content="V" Grid.Column="2" HorizontalAlignment="Left" Margin="252.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="S" Grid.Column="2" HorizontalAlignment="Left" Margin="285.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="D" Grid.Column="2" HorizontalAlignment="Left" Margin="318.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" Style="{DynamicResource ComboBoxGeneric}">
-				<ComboBox.ItemTemplate>
-					<DataTemplate>
-						<Label Content="{Binding}" Width="Auto" Foreground="#FFFFFF"/>
-					</DataTemplate>
-				</ComboBox.ItemTemplate>
-				<ComboBox.ItemContainerStyle>
-					<Style TargetType="{x:Type ComboBoxItem}">
-						<Setter Property="Template">
-							<Setter.Value>
-								<ControlTemplate TargetType="{x:Type ComboBoxItem}">
-									<Border x:Name="Bd" Padding="4,0" BorderBrush="Transparent" CornerRadius="5" BorderThickness="0" Background="Transparent">
-									<StackPanel Orientation="Horizontal">
-										<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-									</StackPanel>
-									</Border>
-									<ControlTemplate.Triggers>
-										<Trigger Property="IsSelected" Value="True">
-											<Setter TargetName="Bd" Property="Background" Value="#616161" />
-										</Trigger>
-										<Trigger Property="IsMouseOver" Value="True">
-											<Setter TargetName="Bd" Property="Background" Value="#525252" />
-										</Trigger>
-									</ControlTemplate.Triggers>
-								</ControlTemplate>
-							</Setter.Value>
-						</Setter>
-					</Style>
-				</ComboBox.ItemContainerStyle>
-			</ComboBox>
+			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" Style="{DynamicResource ComboBoxGeneric}" IsEditable="True"/>
+			<DataGrid x:Name="table_prueba" Grid.Column="1" HorizontalAlignment="Left" Height="160" Margin="176.6,142,0,0" VerticalAlignment="Top" Width="380" AutoGenerateColumns="False" RowHeight="28" SelectionMode="Single" FontSize="14" Style="{DynamicResource DataGridGeneric}">
+				<DataGrid.Columns>
+					<DataGridTextColumn Binding="{Binding Path=Nombre}" ClipboardContentBinding="{x:Null}">
+						<DataGridTextColumn.Header>
+							<Label Content="Nombre" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+					<DataGridTextColumn Binding="{Binding Path=Valor}" ClipboardContentBinding="{x:Null}">
+						<DataGridTextColumn.Header>
+							<Label Content="Valor" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+					<DataGridComboBoxColumn x:Name="columnaCombo" ElementStyle="{DynamicResource ComboBoxGeneric}" EditingElementStyle="{DynamicResource ComboBoxGeneric}">
+						<DataGridComboBoxColumn.Header>
+							<Label Content="Combo" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridComboBoxColumn.Header>
+					</DataGridComboBoxColumn>
+				</DataGrid.Columns>
+			</DataGrid>
 		</Grid>
 		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1F1F1F">
 			<Grid.ColumnDefinitions>

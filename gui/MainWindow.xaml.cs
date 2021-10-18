@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RadioProgramador.model.poco;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,7 +49,7 @@ namespace RadioProgramador.gui {
 			restoreWidth = 800;
 			menuContraido = false;
 			logPinned = false;
-			PruebaCombo();
+			PruebaComboTabla();
 		}
 
 		///////////////////////////////////
@@ -64,12 +65,18 @@ namespace RadioProgramador.gui {
 			log.tb_sql.Text += $"Respuesta: {respuesta}\n";
 		}
 
-		private void PruebaCombo() {
+		private void PruebaComboTabla() {
 			List<string> listaCombo = new List<string>();
+			List<ClasePrueba> listaTabla = new List<ClasePrueba>();
 			listaCombo.Add("Oh sí");
 			listaCombo.Add("Oh no");
 			listaCombo.Add("Oh cielos");
 			combo_prueba.ItemsSource = listaCombo;
+			listaTabla.Add(new ClasePrueba("Elemento1", 1));
+			listaTabla.Add(new ClasePrueba("Elemento2", 2));
+			listaTabla.Add(new ClasePrueba("Elemento3", 3));
+			table_prueba.ItemsSource = listaTabla;
+			columnaCombo.ItemsSource = ClasePrueba.ListaOpciones;
 		}
 
 		///////////////////////////////////

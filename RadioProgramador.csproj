@@ -62,6 +62,7 @@
     <Compile Include="gui\Log.xaml.cs">
       <DependentUpon>Log.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\poco\ClasePrueba.cs" />
     <Compile Include="tools\ExpressionIcon.cs" />
     <Page Include="gui\Log.xaml">
       <SubType>Designer</SubType>
@@ -115,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="model\dao\" />
-    <Folder Include="model\poco\" />
     <Folder Include="resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
