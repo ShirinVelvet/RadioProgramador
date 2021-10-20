@@ -156,8 +156,8 @@
 			<Frame x:Name="frame_log" Source="Log.xaml" Grid.ZIndex="1000" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
 			<TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,40.4,0,0" TextWrapping="Wrap" Text="TextBox1" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.ColumnSpan="2" Grid.Row="1"/>
 			<TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,90.4,0,0" TextWrapping="Wrap" Text="TextBox2" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.ColumnSpan="2" Grid.Row="1"/>
-			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,39.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
-			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Left" Margin="160.8,39.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
+			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,136.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044"/>
+			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Left" Margin="157.8,136.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
 			<CheckBox Content="L" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="153.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="186.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
@@ -165,8 +165,8 @@
 			<CheckBox Content="V" Grid.Column="2" HorizontalAlignment="Left" Margin="252.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="S" Grid.Column="2" HorizontalAlignment="Left" Margin="285.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="D" Grid.Column="2" HorizontalAlignment="Left" Margin="318.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" Style="{DynamicResource ComboBoxGeneric}" IsEditable="True"/>
-			<DataGrid x:Name="table_prueba" Grid.Column="1" HorizontalAlignment="Left" Height="160" Margin="176.6,142,0,0" VerticalAlignment="Top" Width="380" AutoGenerateColumns="False" RowHeight="28" SelectionMode="Single" FontSize="14" Style="{DynamicResource DataGridGeneric}">
+			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" Style="{DynamicResource ComboBoxGeneric}" IsEditable="False"/>
+			<DataGrid x:Name="table_prueba" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="56.6,77,0,0" VerticalAlignment="Top" Width="540" AutoGenerateColumns="False" SelectionMode="Single" FontSize="14" Style="{DynamicResource DataGridGeneric}">
 				<DataGrid.Columns>
 					<DataGridTextColumn Binding="{Binding Path=Nombre}" ClipboardContentBinding="{x:Null}">
 						<DataGridTextColumn.Header>
@@ -185,6 +185,10 @@
 					</DataGridComboBoxColumn>
 				</DataGrid.Columns>
 			</DataGrid>
+			<Calendar Grid.Column="2" HorizontalAlignment="Left" Margin="186.8,77,0,0" VerticalAlignment="Top" CalendarItemStyle="{DynamicResource CalendarItemStyle}" SelectionMode="SingleRange" Style="{DynamicResource CalendarGeneric}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle}" CalendarButtonStyle="{DynamicResource CalendarButtonStyle}"/>
+			<CheckBox Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,40.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource CheckBoxGeneric}"/>
+			<Label Content="Checkbox:" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,19.4,0,0" Grid.Row="1" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Padding="0"/>
+			<CheckBox Grid.Column="2" HorizontalAlignment="Left" Margin="163.8,40.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource CheckBoxToggle}"/>
 		</Grid>
 		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF1F1F1F">
 			<Grid.ColumnDefinitions>
