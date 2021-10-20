@@ -165,7 +165,7 @@
 			<CheckBox Content="V" Grid.Column="2" HorizontalAlignment="Left" Margin="252.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="S" Grid.Column="2" HorizontalAlignment="Left" Margin="285.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
 			<CheckBox Content="D" Grid.Column="2" HorizontalAlignment="Left" Margin="318.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" Style="{DynamicResource ComboBoxGeneric}" IsEditable="False"/>
+			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" IsEditable="False" Style="{DynamicResource ComboBoxGeneric}"/>
 			<DataGrid x:Name="table_prueba" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="56.6,77,0,0" VerticalAlignment="Top" Width="540" AutoGenerateColumns="False" SelectionMode="Single" FontSize="14" Style="{DynamicResource DataGridGeneric}">
 				<DataGrid.Columns>
 					<DataGridTextColumn Binding="{Binding Path=Nombre}" ClipboardContentBinding="{x:Null}">
