@@ -5,7 +5,7 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="clr-namespace:RadioProgramador.gui"
 		mc:Ignorable="d"
-		Title="MainWindow"
+		Title="RadioProgramador"
 		WindowStyle="None" WindowStartupLocation="CenterScreen"
 		ResizeMode="NoResize" Background="#FF121212"
 		Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}"
@@ -33,10 +33,10 @@
 			<Button Content="&#xE8BB;" HorizontalAlignment="Left" Margin="82.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonClose}" Click="Cerrar_click" Grid.Column="2" />
 			<Button x:Name="button_restaurar" Content="&#xE923;" HorizontalAlignment="Left" Margin="41.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Restaurar_click" Grid.Column="2"/>
 			<Button Content="&#xE921;" HorizontalAlignment="Left" Margin="0.2,0,0,0" VerticalAlignment="Top" Width="41" Height="28" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Minimizar_click" Grid.Column="2"/>
-			<TextBlock TextWrapping="Wrap" Text="Radio Programador" Foreground="White" FontSize="14" TextAlignment="Center" Margin="123.2,4,0,0" TextTrimming="CharacterEllipsis" Grid.ColumnSpan="2"/>
+			<TextBlock TextWrapping="Wrap" Text="RadioProgramador" Foreground="White" FontSize="14" TextAlignment="Center" Margin="123.2,4,0,0" TextTrimming="CharacterEllipsis" Grid.ColumnSpan="2"/>
 			<Image HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="28" Grid.Column="0"/>
 		</Grid>
-		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2" Background="#FF121212" PreviewMouseLeftButtonDown="Log_clickAfuera">
+		<Grid x:Name="grid_mainContent" Grid.Row="1" Margin="0,0,0,26" Grid.RowSpan="2" Background="#FF1F1F1F" PreviewMouseLeftButtonDown="Log_clickAfuera">
 			<Grid.RowDefinitions>
 				<RowDefinition/>
 				<RowDefinition/>
