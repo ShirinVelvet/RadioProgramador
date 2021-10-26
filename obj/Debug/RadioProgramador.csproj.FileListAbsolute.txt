@@ -18,3 +18,25 @@ C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\Popu
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\PopupMessage.baml
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\Log.g.cs
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\Log.baml
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\bin\Debug\RadioProgramador.exe.config
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\bin\Debug\RadioProgramador.exe
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\bin\Debug\RadioProgramador.pdb
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.csproj.AssemblyReference.cache
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.csproj.SuggestedBindingRedirects.cache
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\Themes\DarkMode.baml
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\gui\Log.g.cs
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\gui\PopupMessage.g.cs
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\gui\MainWindow.g.cs
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\App.g.cs
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador_MarkupCompile.cache
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador_MarkupCompile.lref
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\App.baml
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\gui\Log.baml
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\gui\PopupMessage.baml
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\gui\MainWindow.baml
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.g.resources
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.Properties.Resources.resources
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.csproj.GenerateResource.cache
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.csproj.CoreCompileInputs.cache
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.exe
+C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.pdb
