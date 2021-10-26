@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace RadioProgramador.gui {
 	/// <summary>
-	/// Interaction logic for Log.xaml
+	/// La visualización de esta pantalla está controlada desde MainWindow
 	/// </summary>
 	public partial class Log : Page {
 		public Log() {
