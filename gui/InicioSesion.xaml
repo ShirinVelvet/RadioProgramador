@@ -1,0 +1,37 @@
+﻿<Window x:Class="RadioProgramador.gui.InicioSesion"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:RadioProgramador.gui"
+		mc:Ignorable="d"
+		Title="RadioProgramador"
+		WindowStyle="None" WindowStartupLocation="CenterScreen"
+		ResizeMode="NoResize" Background="#FF121212"
+		Height="460" Width="360">
+	<WindowChrome.WindowChrome>
+		<WindowChrome x:Name="chrome" CaptionHeight="0" ResizeBorderThickness="0" />
+	</WindowChrome.WindowChrome>
+	<Grid>
+		<Grid VerticalAlignment="Top" MouseDown="Ventana_mover" Background="#FF121212">
+			<Button Content="&#xE8BB;" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Width="41" Height="28" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonClose}" Click="Cerrar_click" />
+			<Button Content="&#xE921;" HorizontalAlignment="Right" Margin="0,0,41,0" VerticalAlignment="Top" Width="41" Height="28" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Minimizar_click"/>
+		</Grid>
+		<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<Label Content="RadioProgramador" Margin="0" Foreground="White" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1"/>
+				<Image HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="36"/>
+			</Grid>
+		</Border>
+		<Label Content="Iniciar Sesión" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+		<Label Content="Usuario" HorizontalAlignment="Left" Margin="90,199,0,0" VerticalAlignment="Top" Foreground="White" Padding="0"/>
+		<Label Content="Contraseña" HorizontalAlignment="Left" Margin="90,269,0,0" VerticalAlignment="Top" Foreground="White" Padding="0"/>
+		<TextBox x:Name="tb_user" HorizontalAlignment="Center" Margin="0,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="180"/>
+		<PasswordBox HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Width="180" Style="{DynamicResource PasswordBoxGeneric}"/>
+		<Button Content="Iniciar Sesión" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Width="180" Style="{DynamicResource ButtonGeneric}" IsDefault="True"/>
+	</Grid>
+</Window>
