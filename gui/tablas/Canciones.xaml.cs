@@ -18,8 +18,10 @@ namespace RadioProgramador.gui.tablas {
 	/// Interaction logic for Canciones.xaml
 	/// </summary>
 	public partial class Canciones : Page {
+
 		public Canciones() {
 			InitializeComponent();
 		}
+
 	}
 }

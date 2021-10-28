@@ -1,0 +1,58 @@
+﻿<Page x:Class="RadioProgramador.gui.programacion.Calendario"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:RadioProgramador.gui.programacion"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="380" d:DesignWidth="660"
+	  Title="Calendario">
+
+	<Border Background="{DynamicResource Page.Background}" BorderThickness="0" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="12"/>
+				<RowDefinition Height="32"/>
+				<RowDefinition/>
+				<RowDefinition Height="180"/>
+				<RowDefinition/>
+				<RowDefinition Height="24"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="24"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="90*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="24"/>
+			</Grid.ColumnDefinitions>
+			<Label x:Name="label_fechaHora" Content="Fecha y hora" Grid.Column="2" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="22" Padding="0" Foreground="White"/>
+			<Button Grid.Column="2" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0" Grid.Row="3" VerticalAlignment="Top" Width="130" Style="{DynamicResource ButtonGeneric}" Height="32" Padding="0,0,12,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+				<Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<Label Grid.Column="0" Content="&#xE768;" FontSize="20" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Width="32"/>
+					<Label Grid.Column="1" Content="Programar" FontSize="14" Foreground="#FFFFFF" Padding="0" VerticalContentAlignment="Center"/>
+				</Grid>
+			</Button>
+			<Button Grid.Column="2" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,44,0,0" Grid.Row="3" VerticalAlignment="Top" Width="130" Style="{DynamicResource ButtonGeneric}" Height="32" Padding="0,0,12,0" Grid.ColumnSpan="2">
+				<Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<Label Grid.Column="0" Content="&#xE932;" FontSize="20" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Width="32"/>
+					<Label Grid.Column="1" Content="Editar día" FontSize="14" Foreground="#FFFFFF" Padding="0" VerticalContentAlignment="Center"/>
+				</Grid>
+			</Button>
+			<Label Content="Días ya programados:" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,72.4" Grid.Row="3" VerticalAlignment="Bottom" Foreground="White" Padding="0" FontSize="14" Grid.ColumnSpan="2"/>
+			<RadioButton x:Name="rb_preguntar" Content="Preguntar antes" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,24.4" Grid.Row="3" VerticalAlignment="Bottom" Foreground="White" BorderBrush="White" Background="{x:Null}" FontSize="14" Style="{DynamicResource RadioButtonGeneric}" Grid.ColumnSpan="2"/>
+			<RadioButton x:Name="rb_noProgramar" Content="No volver a programar" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,0.4" Grid.Row="3" VerticalAlignment="Bottom" Foreground="White" BorderBrush="White" Background="{x:Null}" FontSize="14" Style="{DynamicResource RadioButtonGeneric}" Grid.ColumnSpan="2" IsChecked="True"/>
+			<RadioButton x:Name="rb_sobreescribir" Content="Sobrescribir" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,48.4" Grid.Row="3" VerticalAlignment="Bottom" Foreground="White" BorderBrush="White" Background="{x:Null}" FontSize="14" Style="{DynamicResource RadioButtonGeneric}" Grid.ColumnSpan="2"/>
+			<Calendar Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="2" VerticalAlignment="Center" Style="{DynamicResource CalendarGeneric}" Grid.RowSpan="3"/>
+		</Grid>
+	</Border>
+
+</Page>

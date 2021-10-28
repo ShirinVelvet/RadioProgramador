@@ -65,6 +65,9 @@
     <Compile Include="gui\Log.xaml.cs">
       <DependentUpon>Log.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gui\programacion\Calendario.xaml.cs">
+      <DependentUpon>Calendario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\tablas\Canciones.xaml.cs">
       <DependentUpon>Canciones.xaml</DependentUpon>
     </Compile>
@@ -96,6 +99,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="gui\programacion\Calendario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="gui\tablas\Canciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +139,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="gui\formularios\" />
     <Folder Include="model\dao\" />
     <Folder Include="model\poco\" />
     <Folder Include="resources\" />

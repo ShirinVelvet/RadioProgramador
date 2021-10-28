@@ -7,13 +7,13 @@
 		mc:Ignorable="d"
 		Title="RadioProgramador"
 		WindowStyle="None" WindowStartupLocation="CenterScreen"
-		ResizeMode="NoResize" Background="#FF121212"
+		ResizeMode="NoResize" Background="{DynamicResource App.Background}"
 		Height="460" Width="360">
 	<WindowChrome.WindowChrome>
 		<WindowChrome x:Name="chrome" CaptionHeight="0" ResizeBorderThickness="0" />
 	</WindowChrome.WindowChrome>
 	<Grid>
-		<Grid VerticalAlignment="Top" MouseDown="Ventana_mover" Background="#FF121212">
+		<Grid VerticalAlignment="Top" MouseDown="Ventana_mover" Background="{DynamicResource App.Background}">
 			<Button Content="&#xE8BB;" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Width="41" Height="28" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonClose}" Click="Cerrar_click" />
 			<Button Content="&#xE921;" HorizontalAlignment="Right" Margin="0,0,41,0" VerticalAlignment="Top" Width="41" Height="28" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe MDL2 Assets" Style="{DynamicResource ButtonMaximize}" Click="Minimizar_click"/>
 		</Grid>

@@ -1,4 +1,5 @@
-﻿using RadioProgramador.gui.tablas;
+﻿using RadioProgramador.gui.programacion;
+using RadioProgramador.gui.tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,15 +41,16 @@ namespace RadioProgramador.gui {
 
 		public MainWindow() {
 			InitializeComponent();
-			InicializarVentana();
+			ConfiguracionInicial();
 		}
 
-		private void InicializarVentana() {
+		private void ConfiguracionInicial() {
 			windowMaximized = true;
-			restoreHeight = 600;
-			restoreWidth = 800;
+			restoreHeight = 680;
+			restoreWidth = 1000;
 			menuContraido = false;
 			logPinned = false;
+			frame_panel3.Content = new Calendario();
 			PruebaCombo();
 		}
 
