@@ -46,7 +46,7 @@
 				<ColumnDefinition/>
 				<ColumnDefinition/>
 			</Grid.ColumnDefinitions>
-			<Border BorderBrush="Black" BorderThickness="0" Background="#FF1F1F1F" Grid.RowSpan="2" CornerRadius="5" Margin="4,2,0,2">
+			<Border BorderBrush="Black" BorderThickness="0" Background="#FF1F1F1F" Grid.RowSpan="2" CornerRadius="5" Margin="3">
 				<Grid x:Name="grid_sideMenu" Margin="0">
 					<Grid.RowDefinitions>
 						<RowDefinition Height="50"/>
@@ -57,7 +57,7 @@
 						<ColumnDefinition Width="Auto"/>
 					</Grid.ColumnDefinitions>
 					<StackPanel Margin="0" Grid.Row="1">
-						<RadioButton x:Name="rb_canciones" VerticalAlignment="Top" Margin="0" Foreground="White" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Background="{x:Null}" BorderBrush="{x:Null}" Height="40">
+						<RadioButton x:Name="rb_canciones" VerticalAlignment="Top" Margin="0" Foreground="White" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Background="{x:Null}" BorderBrush="{x:Null}" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -67,7 +67,7 @@
 								<Label x:Name="label_canciones" Grid.Column="1" Content="Canciones" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
 							</Grid>
 						</RadioButton>
-						<RadioButton x:Name="rb_artistas" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<RadioButton x:Name="rb_artistas" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -77,7 +77,7 @@
 								<Label x:Name="label_artistas" Grid.Column="1" Content="Artistas" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
 							</Grid>
 						</RadioButton>
-						<RadioButton x:Name="rb_generos" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<RadioButton x:Name="rb_generos" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -87,7 +87,7 @@
 								<Label x:Name="label_generos" Grid.Column="1" Content="Géneros" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
 							</Grid>
 						</RadioButton>
-						<RadioButton x:Name="rb_categorias" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<RadioButton x:Name="rb_categorias" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -97,7 +97,7 @@
 								<Label x:Name="label_categorias" Grid.Column="1" Content="Categorías" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
 							</Grid>
 						</RadioButton>
-						<RadioButton x:Name="rb_programas" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<RadioButton x:Name="rb_programas" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -107,7 +107,7 @@
 								<Label x:Name="label_programas" Grid.Column="1" Content="Programas" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
 							</Grid>
 						</RadioButton>
-						<RadioButton x:Name="rb_patrones" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<RadioButton x:Name="rb_patrones" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -117,7 +117,7 @@
 								<Label x:Name="label_patrones" Grid.Column="1" Content="Patrones" Foreground="White" FontSize="20" VerticalAlignment="Center" Width="150"/>
 							</Grid>
 						</RadioButton>
-						<RadioButton x:Name="rb_reportes" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40">
+						<RadioButton x:Name="rb_reportes" VerticalAlignment="Top" Margin="0" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Checked="Menu_seleccion">
 							<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="Auto"/>
@@ -128,7 +128,7 @@
 							</Grid>
 						</RadioButton>
 					</StackPanel>
-					<RadioButton x:Name="rb_config" VerticalAlignment="Top" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Margin="0" Grid.Row="3" Grid.RowSpan="2">
+					<RadioButton x:Name="rb_config" VerticalAlignment="Top" Foreground="White" Background="Transparent" Style="{DynamicResource ButtonSideMenu}" GroupName="menuLateral" Height="40" Margin="0" Grid.Row="3" Grid.RowSpan="2" Checked="Menu_seleccion">
 						<Grid Margin="8,0,0,0" Height="40" VerticalAlignment="Center">
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="Auto"/>
@@ -152,47 +152,28 @@
 					</Button>
 				</Grid>
 			</Border>
-			<Frame x:Name="frame_panel1" Grid.Column="1" Margin="2" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
-			<Frame x:Name="frame_panel2" Grid.Column="1" Margin="2" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
-			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="2,2,4,2" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
-			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="2,2,4,2" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
-			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar PopupMessage" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="14" Click="Messagebox_click" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+			<Frame x:Name="frame_panel1" Grid.Column="1" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
+			<Frame x:Name="frame_panel2" Grid.Column="1" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
+			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar PopupMessage" Grid.Column="2" HorizontalAlignment="Left" Margin="34.2,179.2,478,177.6" VerticalAlignment="Top" Foreground="White" FontSize="14" Click="Messagebox_click" Grid.Row="1"/>
 			<Frame x:Name="frame_log" Source="Log.xaml" Panel.ZIndex="1000" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
-			<TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,40.4,0,0" TextWrapping="Wrap" Text="TextBox1" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.ColumnSpan="2" Grid.Row="1"/>
-			<TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,90.4,0,0" TextWrapping="Wrap" Text="TextBox2" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.ColumnSpan="2" Grid.Row="1"/>
-			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,136.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044"/>
-			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Left" Margin="157.8,136.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
-			<CheckBox Content="L" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="153.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="186.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<CheckBox Content="J" Grid.Column="2" HorizontalAlignment="Left" Margin="219.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<CheckBox Content="V" Grid.Column="2" HorizontalAlignment="Left" Margin="252.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<CheckBox Content="S" Grid.Column="2" HorizontalAlignment="Left" Margin="285.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<CheckBox Content="D" Grid.Column="2" HorizontalAlignment="Left" Margin="318.8,90.4,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
-			<ComboBox x:Name="combo_prueba" Grid.Column="1" HorizontalAlignment="Center" Margin="593.6,140.4,594,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" SelectedIndex="1" IsEditable="False" Style="{DynamicResource ComboBoxGeneric}"/>
-			<DataGrid x:Name="table_prueba" Grid.Column="1" HorizontalAlignment="Left" Height="250" Margin="56.6,77,0,0" VerticalAlignment="Top" Width="540" AutoGenerateColumns="False" SelectionMode="Single" FontSize="14" Style="{DynamicResource DataGridGeneric}">
-				<DataGrid.Columns>
-					<DataGridTextColumn Binding="{Binding Nombre}" ClipboardContentBinding="{x:Null}">
-						<DataGridTextColumn.Header>
-							<Label Content="Nombre" FontSize="14" Foreground="#FFFFFF"/>
-						</DataGridTextColumn.Header>
-					</DataGridTextColumn>
-					<DataGridTextColumn Binding="{Binding Valor}" ClipboardContentBinding="{x:Null}">
-						<DataGridTextColumn.Header>
-							<Label Content="Valor" FontSize="14" Foreground="#FFFFFF"/>
-						</DataGridTextColumn.Header>
-					</DataGridTextColumn>
-					<DataGridComboBoxColumn x:Name="columnaCombo" ElementStyle="{DynamicResource ComboBoxGeneric}" EditingElementStyle="{DynamicResource ComboBoxGeneric}">
-						<DataGridComboBoxColumn.Header>
-							<Label Content="Combo" FontSize="14" Foreground="#FFFFFF"/>
-						</DataGridComboBoxColumn.Header>
-					</DataGridComboBoxColumn>
-				</DataGrid.Columns>
-			</DataGrid>
-			<Calendar Grid.Column="2" HorizontalAlignment="Left" Margin="186.8,77,0,0" VerticalAlignment="Top" CalendarItemStyle="{DynamicResource CalendarItemStyle}" SelectionMode="SingleRange" Style="{DynamicResource CalendarGeneric}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle}" CalendarButtonStyle="{DynamicResource CalendarButtonStyle}"/>
-			<CheckBox Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,40.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource CheckBoxGeneric}"/>
-			<Label Content="Checkbox:" Grid.Column="2" HorizontalAlignment="Left" Margin="120.8,19.4,0,0" Grid.Row="1" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Padding="0"/>
-			<CheckBox Grid.Column="2" HorizontalAlignment="Left" Margin="163.8,40.4,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource CheckBoxToggle}"/>
+			<TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="36.2,233.2,481,0" TextWrapping="Wrap" Text="TextBox1" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.Row="1"/>
+			<TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="36.2,283.2,481,0" TextWrapping="Wrap" Text="TextBox2" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="150" Grid.Row="1"/>
+			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Left" Margin="215.2,331.2,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044"/>
+			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Left" Margin="252.2,331.2,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource ButtonIcon}"/>
+			<CheckBox Content="L" Grid.Column="2" HorizontalAlignment="Left" Margin="219.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="252.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="M" Grid.Column="2" HorizontalAlignment="Left" Margin="285.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="J" Grid.Column="2" HorizontalAlignment="Left" Margin="318.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="V" Grid.Column="2" HorizontalAlignment="Left" Margin="351.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="S" Grid.Column="2" HorizontalAlignment="Left" Margin="384.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<CheckBox Content="D" Grid.Column="2" HorizontalAlignment="Left" Margin="417.2,283.2,0,0" VerticalAlignment="Top" Style="{DynamicResource CheckBoxDay}" Grid.Row="1"/>
+			<ComboBox x:Name="combo_prueba" Grid.Column="2" HorizontalAlignment="Left" Margin="36.2,333.2,481,0" Grid.Row="1" VerticalAlignment="Top" Width="150" SelectedIndex="1" IsEditable="False" Style="{DynamicResource ComboBoxGeneric}"/>
+			<Calendar Grid.Column="2" HorizontalAlignment="Left" Margin="384.2,21.2,0,0" VerticalAlignment="Top" CalendarItemStyle="{DynamicResource CalendarItemStyle}" SelectionMode="SingleRange" Style="{DynamicResource CalendarGeneric}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle}" CalendarButtonStyle="{DynamicResource CalendarButtonStyle}" Grid.Row="1"/>
+			<CheckBox Grid.Column="2" HorizontalAlignment="Left" Margin="218.2,233.2,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource CheckBoxGeneric}"/>
+			<Label Content="Checkbox:" Grid.Column="2" HorizontalAlignment="Left" Margin="218.2,212.2,0,0" Grid.Row="1" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Padding="0"/>
+			<CheckBox Grid.Column="2" HorizontalAlignment="Left" Margin="261.2,233.2,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource CheckBoxToggle}"/>
 		</Grid>
 		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="#FF121212">
 			<Grid.ColumnDefinitions>

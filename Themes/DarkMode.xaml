@@ -848,6 +848,7 @@
 	<Style x:Key="DataGridGeneric" TargetType="{x:Type DataGrid}">
 		<Setter Property="Background" Value="#333333"/>
 		<Setter Property="Foreground" Value="#FFFFFF"/>
+		<Setter Property="FontSize" Value="14"/>
 		<Setter Property="BorderBrush" Value="Transparent"/>
 		<Setter Property="BorderThickness" Value="0"/>
 		<Setter Property="RowHeight" Value="24"/>
@@ -861,6 +862,8 @@
 		<Setter Property="CellStyle" Value="{StaticResource DataGridCell}"/>
 		<Setter Property="RowStyle" Value="{StaticResource DataGridRow}"/>
 		<Setter Property="ColumnHeaderStyle" Value="{StaticResource DataGridHeader}"/>
+		<Setter Property="AutoGenerateColumns" Value="False"/>
+		<Setter Property="SelectionMode" Value="Single"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type DataGrid}">

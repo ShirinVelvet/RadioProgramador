@@ -20,6 +20,7 @@ namespace RadioProgramador.gui {
 
 		public InicioSesion() {
 			InitializeComponent();
+			tb_user.Focus();
 		}
 
 		private void Cerrar_click(object sender, RoutedEventArgs e) {

@@ -65,7 +65,9 @@
     <Compile Include="gui\Log.xaml.cs">
       <DependentUpon>Log.xaml</DependentUpon>
     </Compile>
-    <Compile Include="model\poco\ClasePrueba.cs" />
+    <Compile Include="gui\tablas\Canciones.xaml.cs">
+      <DependentUpon>Canciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="tools\ExpressionIcon.cs" />
     <Page Include="gui\InicioSesion.xaml">
       <SubType>Designer</SubType>
@@ -94,6 +96,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="gui\tablas\Canciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\DarkMode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="model\dao\" />
+    <Folder Include="model\poco\" />
     <Folder Include="resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

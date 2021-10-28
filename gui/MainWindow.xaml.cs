@@ -1,4 +1,4 @@
-﻿using RadioProgramador.model.poco;
+﻿using RadioProgramador.gui.tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,12 +49,14 @@ namespace RadioProgramador.gui {
 			restoreWidth = 800;
 			menuContraido = false;
 			logPinned = false;
-			PruebaComboTabla();
+			PruebaCombo();
 		}
 
-		///////////////////////////////////
-		//            Pruebas            //
-		///////////////////////////////////
+		//***************************************//
+		//                                       //
+		//           **** Pruebas ****           //
+		//                                       //
+		//***************************************//
 
 		private void Messagebox_click(object sender, RoutedEventArgs e) {
 			string contenido = "Este es el contenido";
@@ -65,23 +67,48 @@ namespace RadioProgramador.gui {
 			log.tb_sql.Text += $"Respuesta: {respuesta}\n";
 		}
 
-		private void PruebaComboTabla() {
+		private void PruebaCombo() {
 			List<string> listaCombo = new List<string>();
-			List<ClasePrueba> listaTabla = new List<ClasePrueba>();
 			listaCombo.Add("Oh sí");
 			listaCombo.Add("Oh no");
 			listaCombo.Add("Oh cielos");
 			combo_prueba.ItemsSource = listaCombo;
-			listaTabla.Add(new ClasePrueba("Elemento1", 1));
-			listaTabla.Add(new ClasePrueba("Elemento2", 2));
-			listaTabla.Add(new ClasePrueba("Elemento3", 3));
-			table_prueba.ItemsSource = listaTabla;
-			columnaCombo.ItemsSource = listaCombo;
 		}
 
-		///////////////////////////////////
-		//        Barra de titulo        //
-		///////////////////////////////////
+		//***************************************//
+		//                                       //
+		//  **** Selección de Menú lateral ****  //
+		//                                       //
+		//***************************************//
+
+		private void Menu_seleccion(object sender, RoutedEventArgs e) {
+			RadioButton radioButton = (RadioButton) sender;
+			if (radioButton == rb_canciones) {
+				frame_panel1.Content = new Canciones();
+			} else if (radioButton == rb_artistas) {
+
+			} else if (radioButton == rb_generos) {
+
+			} else if (radioButton == rb_categorias) {
+
+			} else if (radioButton == rb_programas) {
+
+			} else if (radioButton == rb_patrones) {
+
+			} else if (radioButton == rb_reportes) {
+
+			} else if (radioButton == rb_artistas) {
+
+			} else if (radioButton == rb_config) {
+
+			}
+		}
+
+		//***************************************//
+		//                                       //
+		//       **** Barra de titulo ****       //
+		//                                       //
+		//***************************************//
 
 		private void Cerrar_click(object sender, RoutedEventArgs e) {
 			Application.Current.Shutdown();
@@ -95,9 +122,11 @@ namespace RadioProgramador.gui {
 			AjustarVentana();
 		}
 
-		///////////////////////////////////
-		//   Ajustar tamaño de ventana   //
-		///////////////////////////////////
+		//***************************************//
+		//                                       //
+		//  **** Ajustar tamaño de ventana ****  //
+		//                                       //
+		//***************************************//
 
 		private void AjustarVentana() {
 			if (windowMaximized) {
@@ -149,9 +178,11 @@ namespace RadioProgramador.gui {
 			}
 		}
 
-		///////////////////////////////////
-		//           Menú y log          //
-		///////////////////////////////////
+		//***************************************//
+		//                                       //
+		//  **** Visibilidad de Menú y log ****  //
+		//                                       //
+		//***************************************//
 
 		private void ContraerMenu_click(object sender, RoutedEventArgs e) {
 			if (menuContraido == true) {
@@ -200,5 +231,6 @@ namespace RadioProgramador.gui {
 				frame_log.Visibility = Visibility.Collapsed;
 			}
 		}
+
 	}
 }

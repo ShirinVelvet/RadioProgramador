@@ -31,7 +31,7 @@
 		<Label Content="Usuario" HorizontalAlignment="Left" Margin="90,199,0,0" VerticalAlignment="Top" Foreground="White" Padding="0"/>
 		<Label Content="Contraseña" HorizontalAlignment="Left" Margin="90,269,0,0" VerticalAlignment="Top" Foreground="White" Padding="0"/>
 		<TextBox x:Name="tb_user" HorizontalAlignment="Center" Margin="0,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="180"/>
-		<PasswordBox HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Width="180" Style="{DynamicResource PasswordBoxGeneric}"/>
+		<PasswordBox x:Name="pb_password" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Width="180" Style="{DynamicResource PasswordBoxGeneric}"/>
 		<Button Content="Iniciar Sesión" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Width="180" Style="{DynamicResource ButtonGeneric}" IsDefault="True"/>
 	</Grid>
 </Window>

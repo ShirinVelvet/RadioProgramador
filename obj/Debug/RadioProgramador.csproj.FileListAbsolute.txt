@@ -43,3 +43,5 @@ C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\RadioProgramador.pdb
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\Themes\DarkMode.baml
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\InicioSesion.g.cs
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\InicioSesion.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Canciones.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Canciones.baml
