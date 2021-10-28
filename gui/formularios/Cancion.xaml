@@ -1,0 +1,68 @@
+﻿<Page x:Class="RadioProgramador.gui.formularios.Cancion"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:RadioProgramador.gui.formularios"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="380" d:DesignWidth="660"
+	  Title="Cancion">
+
+	<Border Background="{DynamicResource Page.Background}" BorderThickness="0" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="12"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition/>
+				<RowDefinition Height="24"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="24"/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="24"/>
+			</Grid.ColumnDefinitions>
+			<Label Content="Nueva canción" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Padding="0" Foreground="White" Grid.ColumnSpan="2"/>
+			<Button Content="&#xE932;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,72,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" IsEnabled="False"/>
+			<Button Content="&#xE74E;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
+			<Button Content="&#xE711;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
+			<StackPanel Grid.Row="2" Grid.Column="1">
+				<Label Content="Título:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<TextBox x:Name="tb_titulo" Margin="0,0,20,8" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}"/>
+				<Label Content="Artista:" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="0" Foreground="White" Margin="0,0,0,2"/>
+				<ComboBox x:Name="combo_artista" VerticalAlignment="Top" Style="{DynamicResource ComboBoxGeneric}" Height="28" Margin="0,0,20,8"/>
+				<Label Content="Álbum:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<TextBox x:Name="tb_album" Margin="0,0,20,12" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}"/>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Label Content="Prioridad:" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Padding="0" Foreground="White"/>
+					<TextBox x:Name="tb_prioridad" Margin="76,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="24" HorizontalAlignment="Left" Height="24" IsReadOnly="True" Text="1" Padding="-10" HorizontalContentAlignment="Center" Cursor="Arrow"/>
+					<Button Content="&#xE738;" HorizontalAlignment="Left" Margin="56,0,0,0" VerticalAlignment="Center" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" Width="20" Height="20" FontSize="12" Click="Prioridad_menos"/>
+					<Button Content="&#xE710;" HorizontalAlignment="Left" Margin="100,2,0,2" VerticalAlignment="Center" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" Width="20" Height="20" FontSize="12" Click="Prioridad_mas"/>
+				</Grid>
+			</StackPanel>
+			<StackPanel Grid.Column="2" Margin="0" Grid.Row="2">
+				<Label Content="Género:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<ComboBox x:Name="combo_genero" VerticalAlignment="Top" Style="{DynamicResource ComboBoxGeneric}" Height="28" Margin="0,0,19.2,8"/>
+				<Label Content="Categoría:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<ComboBox x:Name="combo_categoria" VerticalAlignment="Top" Style="{DynamicResource ComboBoxGeneric}" Height="28" Margin="0,0,19.2,8"/>
+				<Label Content="Días:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<WrapPanel Margin="0,0,0,12">
+					<CheckBox x:Name="check_lunes" Content="L" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+					<CheckBox x:Name="check_martes" Content="M" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+					<CheckBox x:Name="check_miercoles" Content="M" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+					<CheckBox x:Name="checl_jueves" Content="J" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+					<CheckBox x:Name="check_viernes" Content="V" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+					<CheckBox x:Name="check_sabado" Content="S" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+					<CheckBox x:Name="check_domingo" Content="D" Style="{DynamicResource CheckBoxDay}" Margin="0,0,4,4"/>
+				</WrapPanel>
+				<Grid>
+					<Label Content="Activa:" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="0" Foreground="White" Margin="0"/>
+					<CheckBox HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Center" Style="{DynamicResource CheckBoxToggle}" IsChecked="True"/>
+				</Grid>
+			</StackPanel>
+		</Grid>
+	</Border>
+</Page>

@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="gui\formularios\Cancion.xaml.cs">
+      <DependentUpon>Cancion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
     </Compile>
@@ -68,10 +71,32 @@
     <Compile Include="gui\programacion\Calendario.xaml.cs">
       <DependentUpon>Calendario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gui\programacion\Grafica.xaml.cs">
+      <DependentUpon>Grafica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\tablas\Artistas.xaml.cs">
+      <DependentUpon>Artistas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\tablas\Canciones.xaml.cs">
       <DependentUpon>Canciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gui\tablas\Categorias.xaml.cs">
+      <DependentUpon>Categorias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\tablas\Generos.xaml.cs">
+      <DependentUpon>Generos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\tablas\Patrones.xaml.cs">
+      <DependentUpon>Patrones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\tablas\Programas.xaml.cs">
+      <DependentUpon>Programas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="tools\ExpressionIcon.cs" />
+    <Page Include="gui\formularios\Cancion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="gui\InicioSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,7 +128,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="gui\programacion\Grafica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\tablas\Artistas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="gui\tablas\Canciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\tablas\Categorias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\tablas\Generos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\tablas\Patrones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\tablas\Programas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,7 +188,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="gui\formularios\" />
     <Folder Include="model\dao\" />
     <Folder Include="model\poco\" />
     <Folder Include="resources\" />

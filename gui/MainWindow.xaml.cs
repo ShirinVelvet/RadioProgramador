@@ -51,7 +51,7 @@ namespace RadioProgramador.gui {
 			menuContraido = false;
 			logPinned = false;
 			frame_panel3.Content = new Calendario();
-			PruebaCombo();
+			frame_panel4.Content = new Grafica();
 		}
 
 		//***************************************//
@@ -62,19 +62,11 @@ namespace RadioProgramador.gui {
 
 		private void Messagebox_click(object sender, RoutedEventArgs e) {
 			string contenido = "Este es el contenido";
-			bool respuesta = PopupMessage.ShowAndWait("Este es el título", contenido,6, 1, 2);
+			bool respuesta = PopupMessage.ShowAndWait("Este es el título", contenido, 6, 1, 2);
 			Console.WriteLine("Respuesta: " + respuesta);
 			Log log = (Log) frame_log.Content;
 			log.tb_sql.Text += "Se abrió PopupMessage\n";
 			log.tb_sql.Text += $"Respuesta: {respuesta}\n";
-		}
-
-		private void PruebaCombo() {
-			List<string> listaCombo = new List<string>();
-			listaCombo.Add("Oh sí");
-			listaCombo.Add("Oh no");
-			listaCombo.Add("Oh cielos");
-			combo_prueba.ItemsSource = listaCombo;
 		}
 
 		//***************************************//
@@ -88,18 +80,16 @@ namespace RadioProgramador.gui {
 			if (radioButton == rb_canciones) {
 				frame_panel1.Content = new Canciones();
 			} else if (radioButton == rb_artistas) {
-
+				frame_panel1.Content = new Artistas();
 			} else if (radioButton == rb_generos) {
-
+				frame_panel1.Content = new Generos();
 			} else if (radioButton == rb_categorias) {
-
+				frame_panel1.Content = new Categorias();
 			} else if (radioButton == rb_programas) {
-
+				frame_panel1.Content = new Programas();
 			} else if (radioButton == rb_patrones) {
-
+				frame_panel1.Content = new Patrones();
 			} else if (radioButton == rb_reportes) {
-
-			} else if (radioButton == rb_artistas) {
 
 			} else if (radioButton == rb_config) {
 

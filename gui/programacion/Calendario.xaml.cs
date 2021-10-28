@@ -34,7 +34,7 @@ namespace RadioProgramador.gui.programacion {
 		}
 
 		private void TimerTick(object sender, EventArgs e) {
-			label_fechaHora.Content = DateTime.Now.ToString("HH:mm:ss dd'/'MM'/'yyyy");
+			label_fechaHora.Content = DateTime.Now.ToString("HH:mm:ss   dd'/'MM'/'yyyy");
 		}
 
 	}

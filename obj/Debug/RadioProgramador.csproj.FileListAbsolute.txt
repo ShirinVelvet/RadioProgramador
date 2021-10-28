@@ -47,3 +47,17 @@ C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tabl
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Canciones.baml
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\programacion\Calendario.g.cs
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\programacion\Calendario.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Artistas.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Categorias.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Generos.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Patrones.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Programas.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Artistas.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Categorias.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Generos.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Patrones.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\tablas\Programas.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\programacion\Grafica.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\programacion\Grafica.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Cancion.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Cancion.baml

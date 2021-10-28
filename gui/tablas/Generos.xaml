@@ -1,0 +1,46 @@
+﻿<Page x:Class="RadioProgramador.gui.tablas.Generos"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:RadioProgramador.gui.tablas"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="380" d:DesignWidth="660"
+	  Title="Generos">
+
+	<Border Background="{DynamicResource Page.Background}" BorderThickness="0" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="12"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition/>
+				<RowDefinition Height="24"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="24"/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="24"/>
+			</Grid.ColumnDefinitions>
+			<Label Content="Géneros" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Padding="0" Foreground="White" Grid.ColumnSpan="2"/>
+			<TextBox x:Name="tb_buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,0,0,4" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Style="{DynamicResource TextBoxGeneric}" Height="24"/>
+			<Label Content="&#xE721;" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,6" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20" Padding="0" Foreground="White" FontFamily="Segoe MDL2 Assets"/>
+			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044"/>
+			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
+			<DataGrid x:Name="dg_generos" Grid.Column="1" Margin="0,4,0,0" Grid.Row="2" Grid.ColumnSpan="2" SelectionMode="Single" RowStyle="{DynamicResource DataGridRow}" Style="{DynamicResource DataGridGeneric}" FontSize="14" IsReadOnly="True">
+				<DataGrid.Columns>
+					<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}">
+						<DataGridTextColumn.Header>
+							<Label Content="#" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+					<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="*">
+						<DataGridTextColumn.Header>
+							<Label Content="Nombre" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+				</DataGrid.Columns>
+			</DataGrid>
+		</Grid>
+	</Border>
+</Page>
