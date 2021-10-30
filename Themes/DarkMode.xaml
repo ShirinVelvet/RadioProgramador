@@ -955,7 +955,7 @@
 								<Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.MouseOver.Background}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
 							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.MouseOver.Border}"/>
 						</MultiDataTrigger>
 						<MultiDataTrigger>
@@ -963,12 +963,12 @@
 								<Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.MouseOver.Editable.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.MouseOver.Editable.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
 							<Setter Property="BorderThickness" TargetName="splitBorder" Value="0"/>
 							<Setter Property="CornerRadius" TargetName="splitBorder" Value="0,5,5,0"/>
-							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ComboBox.MouseOver.Editable.Button.Background}"/>
-							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ComboBox.MouseOver.Editable.Button.Border}"/>
+							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Combo.MouseOver}"/>
+							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Combo.MouseOver}"/>
 						</MultiDataTrigger>
 						<Trigger Property="IsPressed" Value="true">
 							<Setter Property="Fill" TargetName="arrow" Value="{StaticResource ComboBox.Pressed.Glyph}"/>
@@ -978,19 +978,19 @@
 								<Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="false"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
 						</MultiDataTrigger>
 						<MultiDataTrigger>
 							<MultiDataTrigger.Conditions>
 								<Condition Binding="{Binding IsPressed, RelativeSource={RelativeSource Self}}" Value="true"/>
 								<Condition Binding="{Binding IsEditable, RelativeSource={RelativeSource AncestorType={x:Type ComboBox}}}" Value="true"/>
 							</MultiDataTrigger.Conditions>
-							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Editable.Background}"/>
-							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource ComboBox.Pressed.Editable.Border}"/>
+							<Setter Property="Background" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
+							<Setter Property="BorderBrush" TargetName="templateRoot" Value="{StaticResource Combo.MouseOver}"/>
 							<Setter Property="BorderThickness" TargetName="splitBorder" Value="0"/>
-							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource ComboBox.Pressed.Editable.Button.Background}"/>
-							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource ComboBox.Pressed.Editable.Button.Border}"/>
+							<Setter Property="Background" TargetName="splitBorder" Value="{StaticResource Combo.MouseOver}"/>
+							<Setter Property="BorderBrush" TargetName="splitBorder" Value="{StaticResource Combo.MouseOver}"/>
 						</MultiDataTrigger>
 						<Trigger Property="IsEnabled" Value="false">
 							<Setter Property="Fill" TargetName="arrow" Value="{StaticResource ComboBox.Disabled.Glyph}"/>

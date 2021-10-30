@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RadioProgramador.gui {
+namespace RadioProgramador.gui.otros {
 	/// <summary>
 	/// La visualización de esta pantalla está controlada desde MainWindow
 	/// </summary>

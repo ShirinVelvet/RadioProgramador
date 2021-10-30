@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\App.xaml
-1985472944
+20-2127455787
 
-231795146144
-141510639574
-gui\formularios\Artista.xaml;gui\formularios\Cancion.xaml;gui\formularios\Categoria.xaml;gui\formularios\Genero.xaml;gui\formularios\Patron.xaml;gui\formularios\Programa.xaml;gui\InicioSesion.xaml;gui\Log.xaml;gui\PopupMessage.xaml;gui\MainWindow.xaml;gui\programacion\Calendario.xaml;gui\programacion\Grafica.xaml;gui\tablas\Artistas.xaml;gui\tablas\Canciones.xaml;gui\tablas\Categorias.xaml;gui\tablas\Generos.xaml;gui\tablas\Patrones.xaml;gui\tablas\Programas.xaml;Themes\DarkMode.xaml;
+25-1473602192
+119-536857054
+gui\formularios\Artista.xaml;gui\formularios\Cancion.xaml;gui\formularios\Categoria.xaml;gui\formularios\Genero.xaml;gui\formularios\Patron.xaml;gui\formularios\Programa.xaml;gui\InicioSesion.xaml;gui\otros\Configuracion.xaml;gui\otros\Log.xaml;tools\PopupMessage.xaml;gui\MainWindow.xaml;gui\programacion\Calendario.xaml;gui\programacion\Grafica.xaml;gui\tablas\Artistas.xaml;gui\tablas\Canciones.xaml;gui\tablas\Categorias.xaml;gui\tablas\Generos.xaml;gui\tablas\Patrones.xaml;gui\tablas\Programas.xaml;Themes\DarkMode.xaml;
 
 False
 

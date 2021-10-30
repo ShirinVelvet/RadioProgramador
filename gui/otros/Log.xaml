@@ -1,9 +1,9 @@
-﻿<Page x:Class="RadioProgramador.gui.Log"
+﻿<Page x:Class="RadioProgramador.gui.otros.Log"
 	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-	  xmlns:local="clr-namespace:RadioProgramador.gui"
+	  xmlns:local="clr-namespace:RadioProgramador.gui.otros"
 	  mc:Ignorable="d" 
 	  d:DesignHeight="450" d:DesignWidth="800"
 	  Title="Log" Width="600" Height="300">
@@ -17,7 +17,7 @@
 			<Border BorderThickness="0" CornerRadius="4.5,4.5,0,0" Background="{DynamicResource Button.Static.Background}"/>
 			<Label Grid.Row="0" Content="Log" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Height="24" Width="48" Padding="5,3,5,5"/>
 			<Button Style="{DynamicResource ButtonMaximize}" Content="&#xE921;" HorizontalAlignment="Right" Foreground="White" FontFamily="Segoe MDL2 Assets" Width="28" Click="Minimizar_click" Background="{DynamicResource Button.Static.Background}" Margin="0,0,5,0"/>
-			<TextBox x:Name="tb_sql" Margin="0,0,0,5" Grid.Row="1" TextWrapping="Wrap" Text="Aquí van las queries y comandos de SQL" Background="{DynamicResource App.Background}" Foreground="{DynamicResource General.Text}" SelectionBrush="#FF0078D7" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" FontFamily="Lucida Console" IsReadOnly="True" IsUndoEnabled="False" BorderBrush="{x:Null}" BorderThickness="0" SelectionOpacity="0.3"/>
+			<TextBox x:Name="tb_sql" Margin="0,0,0,5" Grid.Row="1" TextWrapping="Wrap" Text="" Background="{DynamicResource App.Background}" Foreground="{DynamicResource General.Text}" SelectionBrush="#FF0078D7" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" FontFamily="Lucida Console" IsReadOnly="True" IsUndoEnabled="False" BorderBrush="{x:Null}" BorderThickness="0" SelectionOpacity="0.3"/>
 			<Button x:Name="button_anclar" Style="{DynamicResource ButtonMaximize}" Content="&#xE718;" HorizontalAlignment="Right" Foreground="White" FontFamily="Segoe MDL2 Assets" Width="28" Click="Anclar_click" Margin="0,0,33,0" Background="{DynamicResource Button.Static.Background}"/>
 
 		</Grid>

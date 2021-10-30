@@ -1,5 +1,6 @@
 ﻿using RadioProgramador.gui.programacion;
 using RadioProgramador.gui.tablas;
+using RadioProgramador.gui.otros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
+using RadioProgramador.tools;
+using MySql.Data.MySqlClient;
 
 namespace RadioProgramador.gui {
 	/// <summary>
@@ -50,6 +53,7 @@ namespace RadioProgramador.gui {
 			restoreWidth = 1000;
 			menuContraido = false;
 			logPinned = false;
+			frame_log.Content = new Log();
 			frame_panel3.Content = new Calendario();
 			frame_panel4.Content = new Grafica();
 		}
@@ -60,13 +64,19 @@ namespace RadioProgramador.gui {
 		//                                       //
 		//***************************************//
 
-		private void Messagebox_click(object sender, RoutedEventArgs e) {
-			string contenido = "Este es el contenido";
-			bool respuesta = PopupMessage.ShowAndWait("Este es el título", contenido, 6, 1, 2);
-			Console.WriteLine("Respuesta: " + respuesta);
-			Log log = (Log) frame_log.Content;
-			log.tb_sql.Text += "Se abrió PopupMessage\n";
-			log.tb_sql.Text += $"Respuesta: {respuesta}\n";
+		private void ProbarConexion_click(object sender, RoutedEventArgs e) {
+			MySqlConnection connection = Database.Conectar();
+			Log log = (Log)frame_log.Content;
+			try {
+				connection.Open();
+				log.tb_sql.Text += "Se conecto a MySQL\n\n";
+				PopupMessage.ShowAndWait("Conectado", "Conexión a MySQL correcta", 6);
+			} catch (Exception ex) {
+				log.tb_sql.Text += "Error al conectar a MySQL\n\n";
+				PopupMessage.ShowAndWait("Error", "No se pudo conectar a MySQL:\n" + ex.Message, 3);
+			} finally {
+				connection.Close();
+			}
 		}
 
 		//***************************************//
@@ -92,7 +102,7 @@ namespace RadioProgramador.gui {
 			} else if (radioButton == rb_reportes) {
 
 			} else if (radioButton == rb_config) {
-
+				frame_panel1.Content = new Configuracion();
 			}
 		}
 
@@ -223,6 +233,5 @@ namespace RadioProgramador.gui {
 				frame_log.Visibility = Visibility.Collapsed;
 			}
 		}
-
 	}
 }

@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace RadioProgramador.gui {
+namespace RadioProgramador.tools {
 	/// <summary>
 	/// Iconos: 0=Nada, 1=Info, 2=Exclamacion, 3=Error, 4=TrianguloExclamacion, 5=Interrogacion, 6=Completado
 	/// Botones: 0=Nada, 1=Aceptar, 2=Cancelar, 3=Sí, 4=No

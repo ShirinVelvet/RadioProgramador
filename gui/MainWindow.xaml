@@ -156,7 +156,7 @@
 			<Frame x:Name="frame_panel2" Grid.Column="1" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
 			<Frame x:Name="frame_panel3" Grid.Column="2" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden"/>
 			<Frame x:Name="frame_panel4" Grid.Column="2" Margin="3" BorderBrush="#FFABABAB" Foreground="{x:Null}" NavigationUIVisibility="Hidden" Grid.Row="1"/>
-			<Frame x:Name="frame_log" Source="Log.xaml" Panel.ZIndex="1000" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
+			<Frame x:Name="frame_log" Panel.ZIndex="1000" HorizontalAlignment="Right" Height="300" VerticalAlignment="Bottom" Width="600" Grid.Column="1" Margin="0" Grid.RowSpan="2" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
 		</Grid>
 		<Grid x:Name="grid_statusBar" Grid.Row="2" Grid.Column="0" Background="{DynamicResource App.Background}">
 			<Grid.ColumnDefinitions>
@@ -169,7 +169,7 @@
 			<Label x:Name="label_estado" Content="&lt;&lt;Último estado&gt;&gt;" HorizontalAlignment="Left" Foreground="{DynamicResource General.Text}" Grid.Column="1" Margin="30,0,0,0.4"/>
 			<Label x:Name="label_estadoIcono" Content="&#xE930;" HorizontalAlignment="Left" Foreground="White" Grid.Column="1" Margin="6,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" FontSize="14"/>
 			<Button Style="{DynamicResource ButtonGeneric}" Content="Log" Grid.Column="2" Margin="0,2,2,2" Background="{DynamicResource Page.Background}" FontSize="14" Padding="1,-1,1,1" Click="Log_click" Height="Auto"/>
-			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar PopupMessage" Grid.Column="1" HorizontalAlignment="Right" Margin="0,3,3,0" Foreground="White" FontSize="14" Click="Messagebox_click" Height="Auto"/>
+			<Button Style="{DynamicResource ButtonGeneric}" Content="Probar conexión a MySQL" Grid.Column="1" HorizontalAlignment="Right" Margin="0,2,3,2" Foreground="White" FontSize="14" Click="ProbarConexion_click" Height="Auto"/>
 		</Grid>
 	</Grid>
 </Window>
