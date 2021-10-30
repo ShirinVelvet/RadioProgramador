@@ -71,6 +71,12 @@
     <Compile Include="gui\formularios\Genero.xaml.cs">
       <DependentUpon>Genero.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gui\formularios\Patron.xaml.cs">
+      <DependentUpon>Patron.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\formularios\Programa.xaml.cs">
+      <DependentUpon>Programa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
     </Compile>
@@ -115,6 +121,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="gui\formularios\Genero.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\formularios\Patron.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\formularios\Programa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,6 +223,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="gui\otros\" />
     <Folder Include="model\dao\" />
     <Folder Include="model\poco\" />
     <Folder Include="resources\" />

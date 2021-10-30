@@ -27,7 +27,7 @@
 			<Label Content="&#xE721;" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,6" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20" Padding="0" Foreground="White" FontFamily="Segoe MDL2 Assets"/>
 			<Label Content="&#xE71C;" Grid.Column="1" HorizontalAlignment="Left" Margin="180,0,0,6" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20" Padding="0" Foreground="White" FontFamily="Segoe MDL2 Assets"/>
 			<ComboBox x:Name="combo_filtro" Grid.Column="1" HorizontalAlignment="Left" Margin="205,0,0,4" Grid.Row="1" VerticalAlignment="Bottom" Width="100" Style="{DynamicResource ComboBoxGeneric}" IsEditable="False"/>
-			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044"/>
+			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" Click="Agregar_click"/>
 			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
 			<DataGrid x:Name="dg_patrones" Grid.Column="1" Margin="0,4,0,0" Grid.Row="2" Grid.ColumnSpan="2" SelectionMode="Single" RowStyle="{DynamicResource DataGridRow}" Style="{DynamicResource DataGridGeneric}" FontSize="14" IsReadOnly="True">
 				<DataGrid.Columns>

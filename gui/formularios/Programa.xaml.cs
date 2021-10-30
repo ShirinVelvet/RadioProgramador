@@ -1,5 +1,4 @@
-﻿using RadioProgramador.gui.formularios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RadioProgramador.gui.tablas {
+namespace RadioProgramador.gui.formularios {
 	/// <summary>
-	/// Interaction logic for Programas.xaml
+	/// Interaction logic for Programa.xaml
 	/// </summary>
-	public partial class Programas : Page {
-		public Programas() {
+	public partial class Programa : Page {
+		public Programa() {
 			InitializeComponent();
-		}
-
-		private void Agregar_click(object sender, RoutedEventArgs e) {
-			((MainWindow)App.Current.MainWindow).frame_panel2.Content = new Programa();
+			List<string> lista = new List<string>();
+			lista.Add("Oh no");
+			lista.Add("Oh sí");
+			lista.Add("Oh cielos");
+			dg_dias.ItemsSource = lista;
 		}
 	}
 }

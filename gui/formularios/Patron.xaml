@@ -1,0 +1,114 @@
+﻿<Page x:Class="RadioProgramador.gui.formularios.Patron"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:RadioProgramador.gui.formularios"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="380" d:DesignWidth="660"
+	  Title="Patron">
+
+	<Border Background="{DynamicResource Page.Background}" BorderThickness="0" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="12"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition/>
+				<RowDefinition Height="24"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="24"/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="24"/>
+			</Grid.ColumnDefinitions>
+			<Label Content="Nuevo patrón" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Padding="0" Foreground="White" Grid.ColumnSpan="2"/>
+			<Button Content="&#xE932;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,72,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" IsEnabled="False"/>
+			<Button Content="&#xE74E;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
+			<Button Content="&#xE711;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
+			<StackPanel Grid.Row="2" Grid.Column="1" Margin="0" VerticalAlignment="Top">
+				<Label Content="Nombre:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<TextBox x:Name="tb_nombre" Margin="0,0,20,8" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}"/>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Label Content="Elementos:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				</Grid>
+			</StackPanel>
+			<StackPanel Grid.Column="2" Margin="0" Grid.Row="2" VerticalAlignment="Top">
+				<Label Content="Estación de radio:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
+				<ComboBox x:Name="combo_estacion" VerticalAlignment="Top" Style="{DynamicResource ComboBoxGeneric}" Height="28" Margin="0,0,19.2,8"/>
+			</StackPanel>
+			<DataGrid x:Name="dg_elementos" Grid.Column="1" Margin="0" Grid.Row="3" Grid.ColumnSpan="2" SelectionMode="Single" RowStyle="{DynamicResource DataGridRow}" Style="{DynamicResource DataGridGeneric}" FontSize="14" IsReadOnly="True">
+				<DataGrid.Columns>
+					<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="Auto">
+						<DataGridTextColumn.Header>
+							<Label Content="#" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridTextColumn.Header>
+					</DataGridTextColumn>
+					<DataGridComboBoxColumn x:Name="combo_genero" Width="*" ElementStyle="{DynamicResource ComboBoxDataGrid}" EditingElementStyle="{DynamicResource ComboBoxDataGrid}">
+						<DataGridComboBoxColumn.Header>
+							<Label Content="Género" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridComboBoxColumn.Header>
+					</DataGridComboBoxColumn>
+					<DataGridComboBoxColumn x:Name="combo_categoria" Width="*" ElementStyle="{DynamicResource ComboBoxDataGrid}" EditingElementStyle="{DynamicResource ComboBoxDataGrid}">
+						<DataGridComboBoxColumn.Header>
+							<Label Content="Categoría" FontSize="14" Foreground="#FFFFFF"/>
+						</DataGridComboBoxColumn.Header>
+					</DataGridComboBoxColumn>
+					<DataGridTemplateColumn>
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<Button x:Name="button_verCanciones" Style="{DynamicResource ButtonDataGrid}" Content="&#xE721;" Visibility="Hidden"/>
+								<DataTemplate.Triggers>
+									<DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="True">
+										<Setter Property="Visibility" TargetName="button_verCanciones" Value="Visible"/>
+									</DataTrigger>
+								</DataTemplate.Triggers>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+					<DataGridTemplateColumn>
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<Button x:Name="button_subir" Style="{DynamicResource ButtonDataGrid}" Content="&#xE74A;" Visibility="Hidden"/>
+								<DataTemplate.Triggers>
+									<DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="True">
+										<Setter Property="Visibility" TargetName="button_subir" Value="Visible"/>
+									</DataTrigger>
+								</DataTemplate.Triggers>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+					<DataGridTemplateColumn>
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<Button x:Name="button_bajar" Style="{DynamicResource ButtonDataGrid}" Content="&#xE74B;" Visibility="Hidden"/>
+								<DataTemplate.Triggers>
+									<DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="True">
+										<Setter Property="Visibility" TargetName="button_bajar" Value="Visible"/>
+									</DataTrigger>
+								</DataTemplate.Triggers>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+					<DataGridTemplateColumn>
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<Button x:Name="button_remover" Style="{DynamicResource ButtonDataGrid}" Content="&#xE738;" Visibility="Hidden"/>
+								<DataTemplate.Triggers>
+									<DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="True">
+										<Setter Property="Visibility" TargetName="button_remover" Value="Visible"/>
+									</DataTrigger>
+								</DataTemplate.Triggers>
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+				</DataGrid.Columns>
+			</DataGrid>
+		</Grid>
+	</Border>
+</Page>

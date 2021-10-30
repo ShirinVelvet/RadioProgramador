@@ -39,8 +39,8 @@
 					</Grid.ColumnDefinitions>
 					<Label Content="Prioridad:" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Padding="0" Foreground="White"/>
 					<TextBox x:Name="tb_prioridad" Margin="76,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}" Width="24" HorizontalAlignment="Left" Height="24" IsReadOnly="True" Text="1" Padding="-10" HorizontalContentAlignment="Center" Cursor="Arrow"/>
-					<Button Content="&#xE738;" HorizontalAlignment="Left" Margin="56,0,0,0" VerticalAlignment="Center" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" Width="20" Height="20" FontSize="12" Click="Prioridad_menos"/>
-					<Button Content="&#xE710;" HorizontalAlignment="Left" Margin="100,2,0,2" VerticalAlignment="Center" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" Width="20" Height="20" FontSize="12" Click="Prioridad_mas"/>
+					<Button Content="&#xE738;" HorizontalAlignment="Left" Margin="56,0,0,0" VerticalAlignment="Center" Style="{DynamicResource ButtonIcon}" Width="20" Height="20" FontSize="12" Click="Prioridad_menos"/>
+					<Button Content="&#xE710;" HorizontalAlignment="Left" Margin="100,2,0,2" VerticalAlignment="Center" Style="{DynamicResource ButtonIcon}" Width="20" Height="20" FontSize="12" Click="Prioridad_mas"/>
 				</Grid>
 			</StackPanel>
 			<StackPanel Grid.Column="2" Margin="0" Grid.Row="2">
@@ -60,7 +60,7 @@
 				</WrapPanel>
 				<Grid>
 					<Label Content="Activa:" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="0" Foreground="White" Margin="0"/>
-					<CheckBox HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Center" Style="{DynamicResource CheckBoxToggle}" IsChecked="True"/>
+					<CheckBox x:Name="check_activa" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Center" Style="{DynamicResource CheckBoxToggle}" IsChecked="True"/>
 				</Grid>
 			</StackPanel>
 		</Grid>
