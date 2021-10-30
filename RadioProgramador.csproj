@@ -59,8 +59,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="gui\formularios\Artista.xaml.cs">
+      <DependentUpon>Artista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\formularios\Cancion.xaml.cs">
       <DependentUpon>Cancion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\formularios\Categoria.xaml.cs">
+      <DependentUpon>Categoria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\formularios\Genero.xaml.cs">
+      <DependentUpon>Genero.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
@@ -93,7 +102,19 @@
       <DependentUpon>Programas.xaml</DependentUpon>
     </Compile>
     <Compile Include="tools\ExpressionIcon.cs" />
+    <Page Include="gui\formularios\Artista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="gui\formularios\Cancion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\formularios\Categoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gui\formularios\Genero.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

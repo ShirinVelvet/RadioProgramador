@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RadioProgramador.gui.formularios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,10 @@ namespace RadioProgramador.gui.tablas {
 	public partial class Artistas : Page {
 		public Artistas() {
 			InitializeComponent();
+		}
+
+		private void Agregar_click(object sender, RoutedEventArgs e) {
+			((MainWindow)App.Current.MainWindow).frame_panel2.Content = new Artista();
 		}
 	}
 }

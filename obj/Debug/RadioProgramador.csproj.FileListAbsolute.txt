@@ -61,3 +61,9 @@ C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\prog
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\programacion\Grafica.baml
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Cancion.g.cs
 C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Cancion.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Artista.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Categoria.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Genero.g.cs
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Artista.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Categoria.baml
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\gui\formularios\Genero.baml
