@@ -111,6 +111,13 @@
     <Compile Include="gui\tablas\Programas.xaml.cs">
       <DependentUpon>Programas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\poco\Artista.cs" />
+    <Compile Include="model\poco\Cancion.cs" />
+    <Compile Include="model\poco\Categoria.cs" />
+    <Compile Include="model\poco\Estacion.cs" />
+    <Compile Include="model\poco\Genero.cs" />
+    <Compile Include="model\poco\Programa.cs" />
+    <Compile Include="model\poco\Usuario.cs" />
     <Compile Include="tools\ExpressionIcon.cs" />
     <Page Include="gui\formularios\Artista.xaml">
       <SubType>Designer</SubType>
@@ -233,7 +240,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="model\dao\" />
-    <Folder Include="model\poco\" />
     <Folder Include="resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
