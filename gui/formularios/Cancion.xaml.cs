@@ -34,8 +34,10 @@ namespace RadioProgramador.gui.formularios {
 		}
 
 		private void Prioridad_mas(object sender, RoutedEventArgs e) {
-			prioridad++;
-			tb_prioridad.Text = prioridad.ToString();
+			if (prioridad < 255) {
+				prioridad++;
+				tb_prioridad.Text = prioridad.ToString();
+			}
 		}
 	}
 }

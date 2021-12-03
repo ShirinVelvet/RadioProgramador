@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace RadioProgramador.model.poco
 {
-    public class Artista {
+	public class Artista {
 
-        private int idArtista;
-        private string nombre;
+		private int idArtista;
+		private string nombre;
 
-        public int IdArtista { get => idArtista; set => idArtista = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-    }
+		public Artista(int idArtista, string nombre) {
+			this.idArtista = idArtista;
+			this.nombre = nombre;
+		}
+
+		public int IdArtista { get => idArtista; set => idArtista = value; }
+		public string Nombre { get => nombre; set => nombre = value; }
+
+		public override string ToString() {
+			return nombre;
+		}
+	}
 }

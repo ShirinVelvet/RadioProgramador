@@ -116,7 +116,12 @@
     <Compile Include="model\poco\Categoria.cs" />
     <Compile Include="model\poco\Estacion.cs" />
     <Compile Include="model\poco\Genero.cs" />
+    <Compile Include="model\poco\Patron.cs" />
+    <Compile Include="model\poco\PatronElemento.cs" />
     <Compile Include="model\poco\Programa.cs" />
+    <Compile Include="model\poco\Programacion.cs" />
+    <Compile Include="model\poco\ProgramacionCancion.cs" />
+    <Compile Include="model\poco\ProgramaDia.cs" />
     <Compile Include="model\poco\Usuario.cs" />
     <Compile Include="tools\ExpressionIcon.cs" />
     <Page Include="gui\formularios\Artista.xaml">

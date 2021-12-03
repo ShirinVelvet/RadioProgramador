@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\fpa_1\Documents\GitHub\RadioProgramador\obj\Debug\
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\obj\Debug\
 RadioProgramador
 none
 false
 DEBUG;TRACE
-C:\Users\fpa_1\Documents\GitHub\RadioProgramador\App.xaml
-20726467292
+C:\Users\eliza\Stuff\UV\6\D. Software\github\RadioProgramador\App.xaml
+20-2127455787
 
-33821629021
-15-2049035932
+38418102816
+15-1709175102
 gui\formularios\Artista.xaml;gui\formularios\Cancion.xaml;gui\formularios\Categoria.xaml;gui\formularios\Genero.xaml;gui\formularios\Patron.xaml;gui\formularios\Programa.xaml;gui\InicioSesion.xaml;gui\otros\Configuracion.xaml;gui\otros\Log.xaml;tools\PopupMessage.xaml;gui\MainWindow.xaml;gui\programacion\Calendario.xaml;gui\programacion\Grafica.xaml;gui\tablas\Artistas.xaml;gui\tablas\Canciones.xaml;gui\tablas\Categorias.xaml;gui\tablas\Generos.xaml;gui\tablas\Patrones.xaml;gui\tablas\Programas.xaml;Themes\DarkMode.xaml;
 
 False

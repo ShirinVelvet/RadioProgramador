@@ -5,14 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RadioProgramador.model.poco {
-    public class Estacion {
+	public class Estacion {
 
-        private int idEstacion;
-        private string nombre;
-        private string frecuencia;
+		private int idEstacion;
+		private string nombre;
+		private string frecuencia;
 
-        public int IdEstacion { get => idEstacion; set => idEstacion = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Frecuencia { get => frecuencia; set => frecuencia = value; }
-    }
+		public Estacion(int idEstacion, string nombre, string frecuencia) {
+			this.idEstacion = idEstacion;
+			this.nombre = nombre;
+			this.frecuencia = frecuencia;
+		}
+
+		public int IdEstacion { get => idEstacion; set => idEstacion = value; }
+		public string Nombre { get => nombre; set => nombre = value; }
+		public string Frecuencia { get => frecuencia; set => frecuencia = value; }
+	}
 }
