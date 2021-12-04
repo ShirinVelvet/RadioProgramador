@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RadioProgramador.tools {
-	class Database {
+	public static class Database {
 
 		public static MySqlConnection Conectar() {
 

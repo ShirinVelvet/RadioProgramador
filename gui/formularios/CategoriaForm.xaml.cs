@@ -15,16 +15,11 @@ using System.Windows.Shapes;
 
 namespace RadioProgramador.gui.formularios {
 	/// <summary>
-	/// Interaction logic for Programa.xaml
+	/// Interaction logic for Categoria.xaml
 	/// </summary>
-	public partial class Programa : Page {
-		public Programa() {
+	public partial class CategoriaForm : Page {
+		public CategoriaForm() {
 			InitializeComponent();
-			List<string> lista = new List<string>();
-			lista.Add("Oh no");
-			lista.Add("Oh sí");
-			lista.Add("Oh cielos");
-			dg_dias.ItemsSource = lista;
 		}
 	}
 }

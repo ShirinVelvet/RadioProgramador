@@ -18,8 +18,11 @@ namespace RadioProgramador.model.poco
 		private int idArtista;
 		private int idGenero;
 		private int idCategoria;
+		private string artista;
+		private string genero;
+		private string categoria;
 
-		public Cancion(int idCancion, string titulo, string album, string clave, int prioridad, bool activa, string dias, int idArtista, int idGenero, int idCategoria) {
+		public Cancion(int idCancion, string titulo, string album, string clave, int prioridad, bool activa, string dias, int idArtista, int idGenero, int idCategoria, string artista, string genero, string categoria) {
 			this.idCancion = idCancion;
 			this.titulo = titulo;
 			this.album = album;
@@ -30,6 +33,9 @@ namespace RadioProgramador.model.poco
 			this.idArtista = idArtista;
 			this.idGenero = idGenero;
 			this.idCategoria = idCategoria;
+			this.artista = artista;
+			this.genero = genero;
+			this.categoria = categoria;
 		}
 
 		public int IdCancion { get => idCancion; set => idCancion = value; }
@@ -42,5 +48,8 @@ namespace RadioProgramador.model.poco
 		public int IdArtista { get => idArtista; set => idArtista = value; }
 		public int IdGenero { get => idGenero; set => idGenero = value; }
 		public int IdCategoria { get => idCategoria; set => idCategoria = value; }
+		public string Artista { get => artista; set => artista = value; }
+		public string Genero { get => genero; set => genero = value; }
+		public string Categoria { get => categoria; set => categoria = value; }
 	}
 }

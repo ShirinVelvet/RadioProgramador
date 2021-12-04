@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 
 namespace RadioProgramador.gui.formularios {
 	/// <summary>
-	/// Interaction logic for Categoria.xaml
+	/// Interaction logic for Genero.xaml
 	/// </summary>
-	public partial class Categoria : Page {
-		public Categoria() {
+	public partial class GeneroForm : Page {
+		public GeneroForm() {
 			InitializeComponent();
 		}
 	}

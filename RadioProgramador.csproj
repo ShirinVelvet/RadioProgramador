@@ -60,23 +60,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="gui\formularios\Artista.xaml.cs">
-      <DependentUpon>Artista.xaml</DependentUpon>
+    <Compile Include="gui\formularios\ArtistaForm.xaml.cs">
+      <DependentUpon>ArtistaForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\formularios\Cancion.xaml.cs">
-      <DependentUpon>Cancion.xaml</DependentUpon>
+    <Compile Include="gui\formularios\CancionForm.xaml.cs">
+      <DependentUpon>CancionForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\formularios\Categoria.xaml.cs">
-      <DependentUpon>Categoria.xaml</DependentUpon>
+    <Compile Include="gui\formularios\CategoriaForm.xaml.cs">
+      <DependentUpon>CategoriaForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\formularios\Genero.xaml.cs">
-      <DependentUpon>Genero.xaml</DependentUpon>
+    <Compile Include="gui\formularios\GeneroForm.xaml.cs">
+      <DependentUpon>GeneroForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\formularios\Patron.xaml.cs">
-      <DependentUpon>Patron.xaml</DependentUpon>
+    <Compile Include="gui\formularios\PatronForm.xaml.cs">
+      <DependentUpon>PatronForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\formularios\Programa.xaml.cs">
-      <DependentUpon>Programa.xaml</DependentUpon>
+    <Compile Include="gui\formularios\ProgramaForm.xaml.cs">
+      <DependentUpon>ProgramaForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
@@ -111,6 +111,7 @@
     <Compile Include="gui\tablas\Programas.xaml.cs">
       <DependentUpon>Programas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\dao\ArtistaDAO.cs" />
     <Compile Include="model\poco\Artista.cs" />
     <Compile Include="model\poco\Cancion.cs" />
     <Compile Include="model\poco\Categoria.cs" />
@@ -124,27 +125,27 @@
     <Compile Include="model\poco\ProgramaDia.cs" />
     <Compile Include="model\poco\Usuario.cs" />
     <Compile Include="tools\ExpressionIcon.cs" />
-    <Page Include="gui\formularios\Artista.xaml">
+    <Page Include="gui\formularios\ArtistaForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="gui\formularios\Cancion.xaml">
+    <Page Include="gui\formularios\CancionForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="gui\formularios\Categoria.xaml">
+    <Page Include="gui\formularios\CategoriaForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="gui\formularios\Genero.xaml">
+    <Page Include="gui\formularios\GeneroForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="gui\formularios\Patron.xaml">
+    <Page Include="gui\formularios\PatronForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="gui\formularios\Programa.xaml">
+    <Page Include="gui\formularios\ProgramaForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -244,7 +245,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="model\dao\" />
     <Folder Include="resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

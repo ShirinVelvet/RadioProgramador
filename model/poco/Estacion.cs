@@ -20,5 +20,9 @@ namespace RadioProgramador.model.poco {
 		public int IdEstacion { get => idEstacion; set => idEstacion = value; }
 		public string Nombre { get => nombre; set => nombre = value; }
 		public string Frecuencia { get => frecuencia; set => frecuencia = value; }
+
+		public override string ToString() {
+			return nombre;
+		}
 	}
 }

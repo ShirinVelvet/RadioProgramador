@@ -10,19 +10,22 @@ namespace RadioProgramador.model.poco {
 		private int idPatron;
 		private string nombre;
 		private int idEstacion;
+		private string estacion;
 		private List<PatronElemento> elementos = new List<PatronElemento>();
 
-		public Patron(int idPatron, string nombre, int idEstacion, List<PatronElemento> elementos) {
+		public Patron(int idPatron, string nombre, int idEstacion, List<PatronElemento> elementos, string estacion) {
 			this.idPatron = idPatron;
 			this.nombre = nombre;
 			this.idEstacion = idEstacion;
 			this.elementos = elementos;
+			this.estacion = estacion;
 		}
 
 		public int IdPatron { get => idPatron; set => idPatron = value; }
 		public string Nombre { get => nombre; set => nombre = value; }
 		public int IdEstacion { get => idEstacion; set => idEstacion = value; }
 		public List<PatronElemento> Elementos { get => elementos; set => elementos = value; }
+		public string Estacion { get => estacion; set => estacion = value; }
 
 		public override string ToString() {
 			return nombre;

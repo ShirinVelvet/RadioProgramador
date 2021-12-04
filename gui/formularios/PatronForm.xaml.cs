@@ -15,11 +15,16 @@ using System.Windows.Shapes;
 
 namespace RadioProgramador.gui.formularios {
 	/// <summary>
-	/// Interaction logic for Artista.xaml
+	/// Interaction logic for Patron.xaml
 	/// </summary>
-	public partial class Artista : Page {
-		public Artista() {
+	public partial class PatronForm : Page {
+		public PatronForm() {
 			InitializeComponent();
+			List<string> lista = new List<string>();
+			lista.Add("Oh no");
+			lista.Add("Oh sí");
+			lista.Add("Oh cielos");
+			dg_elementos.ItemsSource = lista;
 		}
 	}
 }

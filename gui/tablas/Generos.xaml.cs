@@ -24,7 +24,7 @@ namespace RadioProgramador.gui.tablas {
 		}
 
 		private void Agregar_click(object sender, RoutedEventArgs e) {
-			((MainWindow)App.Current.MainWindow).frame_panel2.Content = new Genero();
+			((MainWindow)App.Current.MainWindow).frame_panel2.Content = new GeneroForm();
 		}
 	}
 }

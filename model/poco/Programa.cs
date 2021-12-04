@@ -11,16 +11,18 @@ namespace RadioProgramador.model.poco {
 		private string nombre;
 		private string clave;
 		private int idEstacion;
+		private string estacion;
 		private bool activo;
 		private List<ProgramaDia> dias = new List<ProgramaDia>();
 
-		public Programa(int idPrograma, string nombre, string clave, int idEstacion, bool activo, List<ProgramaDia> dias) {
+		public Programa(int idPrograma, string nombre, string clave, int idEstacion, bool activo, List<ProgramaDia> dias, string estacion) {
 			this.idPrograma = idPrograma;
 			this.nombre = nombre;
 			this.clave = clave;
 			this.idEstacion = idEstacion;
 			this.activo = activo;
 			this.dias = dias;
+			this.estacion = estacion;
 		}
 
 		public int IdPrograma { get => idPrograma; set => idPrograma = value; }
@@ -29,5 +31,10 @@ namespace RadioProgramador.model.poco {
 		public int IdEstacion { get => idEstacion; set => idEstacion = value; }
 		public bool Activo { get => activo; set => activo = value; }
 		public List<ProgramaDia> Dias { get => dias; set => dias = value; }
+		public string Estacion { get => estacion; set => estacion = value; }
+
+		public override string ToString() {
+			return nombre;
+		}
 	}
 }

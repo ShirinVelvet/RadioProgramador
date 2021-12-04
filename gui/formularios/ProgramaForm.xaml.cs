@@ -15,29 +15,16 @@ using System.Windows.Shapes;
 
 namespace RadioProgramador.gui.formularios {
 	/// <summary>
-	/// Interaction logic for Cancion.xaml
+	/// Interaction logic for Programa.xaml
 	/// </summary>
-	public partial class Cancion : Page {
-
-		private int prioridad;
-
-		public Cancion() {
+	public partial class ProgramaForm : Page {
+		public ProgramaForm() {
 			InitializeComponent();
-			prioridad = 1;
-		}
-
-		private void Prioridad_menos(object sender, RoutedEventArgs e) {
-			if (prioridad > 0) {
-				prioridad--;
-				tb_prioridad.Text = prioridad.ToString();
-			}
-		}
-
-		private void Prioridad_mas(object sender, RoutedEventArgs e) {
-			if (prioridad < 255) {
-				prioridad++;
-				tb_prioridad.Text = prioridad.ToString();
-			}
+			List<string> lista = new List<string>();
+			lista.Add("Oh no");
+			lista.Add("Oh sí");
+			lista.Add("Oh cielos");
+			dg_dias.ItemsSource = lista;
 		}
 	}
 }
