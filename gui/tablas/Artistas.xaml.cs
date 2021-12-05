@@ -32,7 +32,6 @@ namespace RadioProgramador.gui.tablas {
 		private void CargarArtistas() {
 			artistas = ArtistaDAO.GetAll();
 			dg_artistas.ItemsSource = artistas;
-			Console.WriteLine(artistas.Count);
 		}
 
 		private void Agregar_click(object sender, RoutedEventArgs e) {

@@ -16,8 +16,8 @@ namespace RadioProgramador.tools {
 
 			string server = "localhost";
 			string database = "musica";
-			string user = "user";
-			string password = "password";
+			string user = "Lemu";
+			string password = "1807";
 			int port = 3306;
 
 			string connectionString = $"server={server};user={user};database={database};port={port};password={password}";

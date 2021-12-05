@@ -112,6 +112,7 @@
       <DependentUpon>Programas.xaml</DependentUpon>
     </Compile>
     <Compile Include="model\dao\ArtistaDAO.cs" />
+    <Compile Include="model\dao\CancionDAO.cs" />
     <Compile Include="model\poco\Artista.cs" />
     <Compile Include="model\poco\Cancion.cs" />
     <Compile Include="model\poco\Categoria.cs" />
