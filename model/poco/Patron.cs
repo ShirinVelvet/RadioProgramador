@@ -13,11 +13,10 @@ namespace RadioProgramador.model.poco {
 		private string estacion;
 		private List<PatronElemento> elementos = new List<PatronElemento>();
 
-		public Patron(int idPatron, string nombre, int idEstacion, List<PatronElemento> elementos, string estacion) {
+		public Patron(int idPatron, string nombre, int idEstacion, string estacion) {
 			this.idPatron = idPatron;
 			this.nombre = nombre;
 			this.idEstacion = idEstacion;
-			this.elementos = elementos;
 			this.estacion = estacion;
 		}
 

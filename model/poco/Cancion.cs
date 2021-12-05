@@ -43,8 +43,33 @@ namespace RadioProgramador.model.poco
 		public string Album { get => album; set => album = value; }
 		public string Clave { get => clave; set => clave = value; }
 		public int Prioridad { get => prioridad; set => prioridad = value; }
+
 		public bool Activa { get => activa; set => activa = value; }
+		public string ActivaIcono {
+			get {
+				if (activa) {
+					return "\xE73E";
+				} else {
+					return "";
+				}
+			}
+		}
+
 		public string Dias { get => dias; set => dias = value; }
+		public string DiasTexto {
+			get {
+				string diasTexto = dias;
+				diasTexto = diasTexto.Replace('1', 'L');
+				diasTexto = diasTexto.Replace('2', 'M');
+				diasTexto = diasTexto.Replace('3', 'M');
+				diasTexto = diasTexto.Replace('4', 'J');
+				diasTexto = diasTexto.Replace('5', 'V');
+				diasTexto = diasTexto.Replace('6', 'S');
+				diasTexto = diasTexto.Replace('7', 'D');
+				return diasTexto;
+			}
+		}
+
 		public int IdArtista { get => idArtista; set => idArtista = value; }
 		public int IdGenero { get => idGenero; set => idGenero = value; }
 		public int IdCategoria { get => idCategoria; set => idCategoria = value; }

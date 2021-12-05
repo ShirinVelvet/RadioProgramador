@@ -13,12 +13,11 @@ namespace RadioProgramador.model.poco {
 		private int idPrograma;
 		private List<ProgramacionCancion> programacionCanciones = new List<ProgramacionCancion>();
 
-		public Programacion(int idProgramacion, int idEstacion, DateTime fecha, int idPrograma, List<ProgramacionCancion> programacionCanciones) {
+		public Programacion(int idProgramacion, int idEstacion, DateTime fecha, int idPrograma) {
 			this.idProgramacion = idProgramacion;
 			this.idEstacion = idEstacion;
 			this.fecha = fecha;
 			this.idPrograma = idPrograma;
-			this.programacionCanciones = programacionCanciones;
 		}
 
 		public int IdProgramacion { get => idProgramacion; set => idProgramacion = value; }

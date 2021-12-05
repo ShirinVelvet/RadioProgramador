@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 using RadioProgramador.tools;
 
 namespace RadioProgramador.model.dao {
-    public static class GeneroDAO {
+	public static class GeneroDAO {
 
 		public static List<Genero> GetAll() {
 

@@ -15,13 +15,12 @@ namespace RadioProgramador.model.poco {
 		private bool activo;
 		private List<ProgramaDia> dias = new List<ProgramaDia>();
 
-		public Programa(int idPrograma, string nombre, string clave, int idEstacion, bool activo, List<ProgramaDia> dias, string estacion) {
+		public Programa(int idPrograma, string nombre, string clave, int idEstacion, bool activo, string estacion) {
 			this.idPrograma = idPrograma;
 			this.nombre = nombre;
 			this.clave = clave;
 			this.idEstacion = idEstacion;
 			this.activo = activo;
-			this.dias = dias;
 			this.estacion = estacion;
 		}
 

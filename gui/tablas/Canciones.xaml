@@ -56,12 +56,12 @@
 							<Label Content="Categoría" FontSize="14" Foreground="#FFFFFF"/>
 						</DataGridTextColumn.Header>
 					</DataGridTextColumn>
-					<DataGridTextColumn Binding="{Binding Dias}" ClipboardContentBinding="{x:Null}">
+					<DataGridTextColumn Binding="{Binding DiasTexto}" ClipboardContentBinding="{x:Null}">
 						<DataGridTextColumn.Header>
 							<Label Content="Días" FontSize="14" Foreground="#FFFFFF"/>
 						</DataGridTextColumn.Header>
 					</DataGridTextColumn>
-					<DataGridTextColumn Binding="{Binding Activa}" ClipboardContentBinding="{x:Null}">
+					<DataGridTextColumn Binding="{Binding ActivaIcono}" FontFamily="Segoe MDL2 Assets" ClipboardContentBinding="{x:Null}">
 						<DataGridTextColumn.Header>
 							<Label Content="Activa" FontSize="14" Foreground="#FFFFFF"/>
 						</DataGridTextColumn.Header>

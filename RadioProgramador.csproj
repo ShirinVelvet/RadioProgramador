@@ -115,6 +115,8 @@
     <Compile Include="model\dao\CancionDAO.cs" />
     <Compile Include="model\dao\CategoriaDAO.cs" />
     <Compile Include="model\dao\GeneroDAO.cs" />
+    <Compile Include="model\dao\PatronDAO.cs" />
+    <Compile Include="model\dao\ProgramaDAO.cs" />
     <Compile Include="model\poco\Artista.cs" />
     <Compile Include="model\poco\Cancion.cs" />
     <Compile Include="model\poco\Categoria.cs" />

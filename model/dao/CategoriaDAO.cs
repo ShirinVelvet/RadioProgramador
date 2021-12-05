@@ -6,14 +6,14 @@ using RadioProgramador.tools;
 
 
 namespace RadioProgramador.model.dao {
-    public static class CategoriaDAO {
+	public static class CategoriaDAO {
 
-        public static List<Categoria> GetAll() {
+		public static List<Categoria> GetAll() {
 
-            List<Categoria> categorias = new List<Categoria>();
-            MySqlConnection connection = Database.Conectar();
+			List<Categoria> categorias = new List<Categoria>();
+			MySqlConnection connection = Database.Conectar();
 
-            try {
+			try {
 
 				connection.Open();
 
@@ -40,6 +40,5 @@ namespace RadioProgramador.model.dao {
 			return categorias;
 		}
 
-        }
-    }
+	}
 }
