@@ -40,5 +40,57 @@ namespace RadioProgramador.model.dao {
 			return categorias;
 		}
 
+		public static bool GuardarCategoria(Categoria categoria) {
+
+			bool guardado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "INSERT INTO categorias (nombre) VALUES (@nombre)";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+
+				command.Parameters.AddWithValue("@nombre", categoria.Nombre);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				guardado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return guardado;
+		}
+
+		public static bool ModificarCategoria(Categoria categoria) {
+
+			bool guardado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "UPDATE categorias SET nombre = @nombre WHERE id = @id";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+
+				command.Parameters.AddWithValue("@nombre", categoria.Nombre);
+				command.Parameters.AddWithValue("@id", categoria.IdCategoria);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				guardado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return guardado;
+		}
 	}
 }

@@ -44,5 +44,19 @@ namespace RadioProgramador.gui.tablas {
 													select artista).ToList();
 			dg_artistas.ItemsSource = artistasFiltrados;
 		}
+
+		private void Tabla_seleccion(object sender, SelectionChangedEventArgs e) {
+			Artista artista = (Artista) dg_artistas.SelectedItem;
+			if (artista != null) {
+				((MainWindow)App.Current.MainWindow).frame_panel2.Content = new ArtistaForm(artista);
+			}
+		}
+
+		public void ActualizarTabla() {
+			CargarArtistas();
+			string texto = tb_buscar.Text;
+			tb_buscar.Text = "";
+			tb_buscar.Text = texto;
+		}
 	}
 }

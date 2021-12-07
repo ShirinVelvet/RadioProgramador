@@ -43,5 +43,84 @@ namespace RadioProgramador.model.dao {
 
 		}
 
+		public static bool GuardarArtista(Artista artista) {
+
+			bool guardado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "INSERT INTO artistas (nombre) VALUES (@nombre)";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+
+				command.Parameters.AddWithValue("@nombre", artista.Nombre);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				guardado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return guardado;
+		}
+
+		public static bool ModificarArtista(Artista artista) {
+
+			bool guardado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "UPDATE artistas SET nombre = @nombre WHERE id = @id";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+
+				command.Parameters.AddWithValue("@nombre", artista.Nombre);
+				command.Parameters.AddWithValue("@id", artista.IdArtista);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				guardado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return guardado;
+		}
+
+		public static bool EliminarArtista(int id) {
+
+			bool eliminado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "DELETE FROM artistas WHERE id = @id";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+				command.Parameters.AddWithValue("@id", id);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				eliminado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return eliminado;
+
+		}
+
 	}
 }

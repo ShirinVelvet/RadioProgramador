@@ -22,10 +22,10 @@
 				<ColumnDefinition/>
 				<ColumnDefinition Width="24"/>
 			</Grid.ColumnDefinitions>
-			<Label Content="Nuevo artista" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Padding="0" Foreground="White" Grid.ColumnSpan="2"/>
-			<Button Content="&#xE932;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,72,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" IsEnabled="False"/>
-			<Button Content="&#xE74E;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
-			<Button Content="&#xE711;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
+			<Label x:Name="label_titulo" Content="Nuevo artista" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Padding="0" Foreground="White" Grid.ColumnSpan="2"/>
+			<Button x:Name="button_editar" Content="&#xE932;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,72,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" IsEnabled="False" Click="Editar_click"/>
+			<Button x:Name="button_guardar" Content="&#xE74E;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" Click="Guardar_click"/>
+			<Button Content="&#xE711;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" Click="Cerrar_click"/>
 			<StackPanel Grid.Row="2" Grid.Column="1">
 				<Label Content="Nombre:" HorizontalAlignment="Left" Margin="0,0,0,2" VerticalAlignment="Top" Padding="0" Foreground="White"/>
 				<TextBox x:Name="tb_nombre" Margin="0,0,20,8" TextWrapping="Wrap" VerticalAlignment="Top" Style="{DynamicResource TextBoxGeneric}"/>

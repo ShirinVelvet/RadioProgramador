@@ -23,18 +23,18 @@
 				<ColumnDefinition Width="24"/>
 			</Grid.ColumnDefinitions>
 			<Label Content="Categorías" Grid.Column="1" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Padding="0" Foreground="White" Grid.ColumnSpan="2"/>
-			<TextBox x:Name="tb_buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,0,0,4" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Style="{DynamicResource TextBoxGeneric}" Height="24"/>
+			<TextBox x:Name="tb_buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,0,0,4" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Style="{DynamicResource TextBoxGeneric}" Height="24" TextChanged="Buscar_textChanged"/>
 			<Label Content="&#xE721;" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,6" Grid.Row="1" VerticalAlignment="Bottom" FontSize="20" Padding="0" Foreground="White" FontFamily="Segoe MDL2 Assets"/>
 			<Button Content="&#xE710;" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,36,0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}" RenderTransformOrigin="-2.188,0.044" Click="Agregar_click"/>
 			<Button Content="&#xE74D;" Grid.Column="2" HorizontalAlignment="Right" Margin="0" Grid.Row="1" VerticalAlignment="Bottom" Style="{DynamicResource ButtonIcon}"/>
-			<DataGrid x:Name="dg_categorias" Grid.Column="1" Margin="0,4,0,0" Grid.Row="2" Grid.ColumnSpan="2" SelectionMode="Single" RowStyle="{DynamicResource DataGridRow}" Style="{DynamicResource DataGridGeneric}" FontSize="14" IsReadOnly="True">
+			<DataGrid x:Name="dg_categorias" Grid.Column="1" Margin="0,4,0,0" Grid.Row="2" Grid.ColumnSpan="2" SelectionMode="Single" RowStyle="{DynamicResource DataGridRow}" Style="{DynamicResource DataGridGeneric}" FontSize="14" IsReadOnly="True" SelectionChanged="Tabla_seleccion">
 				<DataGrid.Columns>
-					<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}">
+					<DataGridTextColumn Binding="{Binding IdCategoria}" ClipboardContentBinding="{x:Null}">
 						<DataGridTextColumn.Header>
 							<Label Content="#" FontSize="14" Foreground="#FFFFFF"/>
 						</DataGridTextColumn.Header>
 					</DataGridTextColumn>
-					<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Width="*">
+					<DataGridTextColumn Binding="{Binding Nombre}" ClipboardContentBinding="{x:Null}" Width="*">
 						<DataGridTextColumn.Header>
 							<Label Content="Nombre" FontSize="14" Foreground="#FFFFFF"/>
 						</DataGridTextColumn.Header>

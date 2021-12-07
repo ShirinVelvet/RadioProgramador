@@ -39,5 +39,58 @@ namespace RadioProgramador.model.dao {
 			return generos;
 
 		}
+
+		public static bool GuardarGenero(Genero genero) {
+
+			bool guardado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "INSERT INTO generos (nombre) VALUES (@nombre)";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+
+				command.Parameters.AddWithValue("@nombre", genero.Nombre);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				guardado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return guardado;
+		}
+
+		public static bool ModificarGenero(Genero genero) {
+
+			bool guardado = false;
+			MySqlConnection connection = Database.Conectar();
+
+			try {
+
+				connection.Open();
+
+				string sql = "UPDATE generos SET nombre = @nombre WHERE id = @id";
+				MySqlCommand command = new MySqlCommand(sql, connection);
+
+				command.Parameters.AddWithValue("@nombre", genero.Nombre);
+				command.Parameters.AddWithValue("@id", genero.IdGenero);
+				command.Prepare();
+				command.ExecuteNonQuery();
+
+				guardado = true;
+
+			} catch (Exception ex) {
+				Console.WriteLine(ex.Message);
+			}
+
+			connection.Close();
+			return guardado;
+		}
 	}
 }

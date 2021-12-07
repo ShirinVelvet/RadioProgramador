@@ -1,4 +1,8 @@
-﻿using System;
+﻿using RadioProgramador.gui.tablas;
+using RadioProgramador.model.dao;
+using RadioProgramador.model.poco;
+using RadioProgramador.tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +22,112 @@ namespace RadioProgramador.gui.formularios {
 	/// Interaction logic for Genero.xaml
 	/// </summary>
 	public partial class GeneroForm : Page {
+
+		private bool editando;
+		private Genero genero;
+
 		public GeneroForm() {
 			InitializeComponent();
+			editando = false;
+		}
+
+		public GeneroForm(Genero genero) : this() {
+			this.genero = genero;
+			editando = true;
+			CargarGenero();
+			CambiarEstado();
+		}
+
+		private void CargarGenero() {
+			tb_nombre.Text = genero.Nombre;
+			label_titulo.Content = genero.Nombre;
+		}
+
+		private void Editar_click(object sender, RoutedEventArgs e) {
+			CambiarEstado();
+		}
+
+		private void Guardar_click(object sender, RoutedEventArgs e) {
+
+			if (CamposVacios()) {
+				PopupMessage.ShowAndWait("Campos vacios", "Rellena todos los campos", 2);
+				return;
+			}
+
+			if (editando) {
+				Modificar();
+			} else {
+				Guardar();
+			}
+
+			label_titulo.Content = genero.Nombre;
+
+			Generos generos = (Generos)((MainWindow)App.Current.MainWindow).frame_panel1.Content;
+			generos.ActualizarTabla();
+
+		}
+
+		private void Cerrar_click(object sender, RoutedEventArgs e) {
+			((MainWindow)App.Current.MainWindow).frame_panel2.Content = null;
+		}
+
+		private void Guardar() {
+			Genero genero = CrearGenero();
+			bool guardado = GeneroDAO.GuardarGenero(genero);
+			if (guardado) {
+				CambiarEstado();
+			} else {
+				PopupMessage.ShowAndWait("Error", "No se pudo guardar", 3);
+			}
+		}
+
+		private void Modificar() {
+			ModificarGenero();
+			bool guardado = GeneroDAO.ModificarGenero(genero);
+			if (guardado) {
+				CambiarEstado();
+			} else {
+				PopupMessage.ShowAndWait("Error", "No se pudo guardar", 3);
+			}
+		}
+
+		//***************************************//
+		//                                       //
+		//     **** Métodos auxiliares ****      //
+		//                                       //
+		//***************************************//
+
+		private bool CamposVacios() {
+			bool camposVacios = false;
+			if (tb_nombre.Text.Length < 1) {
+				camposVacios = true;
+			}
+			return camposVacios;
+		}
+
+		private Genero CrearGenero() {
+			string nombre = tb_nombre.Text;
+			Genero genero = new Genero(0, nombre);
+			return genero;
+		}
+
+		private void ModificarGenero() {
+			string nombre = tb_nombre.Text;
+			genero.Nombre = nombre;
+		}
+
+		private void CambiarEstado() {
+			if (editando) {
+				editando = false;
+				button_guardar.IsEnabled = false;
+				button_editar.IsEnabled = true;
+				tb_nombre.IsReadOnly = true;
+			} else {
+				editando = true;
+				button_guardar.IsEnabled = true;
+				button_editar.IsEnabled = false;
+				tb_nombre.IsReadOnly = false;
+			}
 		}
 	}
 }
